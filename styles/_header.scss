@@ -1,0 +1,116 @@
+header {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: $primary;
+  overflow: hidden;
+
+  nav {
+    background-color: #fff;
+    width: fit-content;
+    height: 3vh;
+    margin-left: 3%;
+    margin-top: 1%;
+    border-radius: 4px;
+    transform: translateX(100vw);
+    ul {
+      display: flex;
+      li {
+        padding: 5px 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  @keyframes nav-move {
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  #header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+    text-align: center;
+
+    background-color: transparent;
+  }
+
+  .top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 250px;
+    background: linear-gradient(to right, $blue, transparent);
+    overflow: hidden;
+    transform: translateX(-100%);
+  }
+
+  .left-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(to top, $red, transparent);
+    overflow: hidden;
+    transform: translateY(-100%);
+  }
+  .right-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(to bottom, $green, transparent);
+    overflow: hidden;
+    transform: translateY(-100%);
+  }
+  .bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 250px;
+    background: linear-gradient(to left, $blue-light, transparent);
+    overflow: hidden;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes topAni {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    // transform: translateX(-100%);
+  }
+}
+@keyframes leftAni {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+@keyframes rightAni {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    // transform: translateY(-100%);
+  }
+}
+@keyframes bottomAni {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    // transform: translateX(100%);
+  }
+}

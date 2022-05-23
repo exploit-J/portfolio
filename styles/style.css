@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box; }
+
+html {
+  font-family: "Noto Sans KR", sans-serif; }
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  overflow-x: hidden;
+  background-color: #3F4150; }
+
+h1 {
+  margin: 0; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+button,
+input,
+select,
+textarea {
+  border: none;
+  background-color: transparent; }
+  button:focus,
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    box-shadow: none; }
+
+a,
+button {
+  cursor: pointer; }
+
+button {
+  padding: 0; }
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0; }
+
+address {
+  font-style: normal; }
+
+header {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #3F4150;
+  overflow: hidden; }
+  header nav {
+    background-color: #fff;
+    width: fit-content;
+    height: 3vh;
+    margin-left: 3%;
+    margin-top: 1%;
+    border-radius: 4px;
+    transform: translateX(100vw); }
+    header nav ul {
+      display: flex; }
+      header nav ul li {
+        padding: 5px 10px;
+        margin-right: 10px; }
+
+@keyframes nav-move {
+  100% {
+    transform: translateX(0); } }
+  header #header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    text-align: center;
+    background-color: transparent; }
+  header .top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 250px;
+    background: linear-gradient(to right, #3DA5F5, transparent);
+    overflow: hidden;
+    transform: translateX(-100%); }
+  header .left-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(to top, #F86D7D, transparent);
+    overflow: hidden;
+    transform: translateY(-100%); }
+  header .right-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(to bottom, #22C58B, transparent);
+    overflow: hidden;
+    transform: translateY(-100%); }
+  header .bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 250px;
+    background: linear-gradient(to left, #ECF6FE, transparent);
+    overflow: hidden;
+    transform: translateX(100%); }
+
+@keyframes topAni {
+  from {
+    transform: translateX(100%); }
+  to { } }
+
+@keyframes leftAni {
+  from {
+    transform: translateY(-100%); }
+  to {
+    transform: translateY(100%); } }
+
+@keyframes rightAni {
+  from {
+    transform: translateY(100%); }
+  to { } }
+
+@keyframes bottomAni {
+  from {
+    transform: translateX(-100%); }
+  to { } }
+
+/*# sourceMappingURL=style.css.map */
