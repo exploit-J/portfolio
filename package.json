@@ -3,6 +3,6 @@
     "node-sass": "^7.0.1"
   },
   "scripts": {
-    "sass": "node-sass -wr --source-map true styles/integration.scss styles/style.css"
+    "sass": "node-sass -wr --source-map true styles/main.scss styles/style.css"
   }
 }

@@ -6,25 +6,50 @@ header {
   overflow: hidden;
 
   nav {
-    background-color: #fff;
-    width: fit-content;
+    position: fixed;
+    top: 15px;
+    left: 25px;
+    width: 100%;
     height: 3vh;
-    margin-left: 3%;
-    margin-top: 1%;
+    background-color: #fff;
     border-radius: 4px;
-    transform: translateX(100vw);
+    // transform: translateX(100vw);
     ul {
       display: flex;
       li {
-        padding: 5px 10px;
-        margin-right: 10px;
-      }
-    }
-  }
+        position: relative;
+        padding: 5px 2px;
+        margin-right: 20px;
+        transition: 0.5s;
+        cursor: pointer;
 
-  @keyframes nav-move {
-    100% {
-      transform: translateX(0);
+        &:first-child {
+          margin-left: 20px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+        &:hover {
+          opacity: 0.5;
+          &::after {
+            transform: scale(1);
+          }
+        }
+        &::after {
+          position: absolute;
+          left: 0;
+          bottom: -1px;
+          display: block;
+          content: "";
+          width: 100%;
+          height: 1px;
+          border-bottom: 1px solid $red;
+          background-color: $red;
+          transform: scale(0);
+          transition: 0.5s;
+        }
+      }
     }
   }
 
@@ -86,9 +111,6 @@ header {
   from {
     transform: translateX(100%);
   }
-  to {
-    // transform: translateX(-100%);
-  }
 }
 @keyframes leftAni {
   from {
@@ -102,15 +124,29 @@ header {
   from {
     transform: translateY(100%);
   }
-  to {
-    // transform: translateY(-100%);
-  }
 }
 @keyframes bottomAni {
   from {
     transform: translateX(-100%);
   }
-  to {
-    // transform: translateX(100%);
+}
+@keyframes nav-move {
+  20% {
+    width: 10%;
+    transform: translateX(0);
+  }
+  90% {
+    width: 15%;
+    transform: translateX(30%);
+  }
+  96% {
+    transform: translateX(0);
+  }
+  98% {
+    transform: translateX(5%);
+  }
+  100% {
+    width: fit-content;
+    transform: translateX(0);
   }
 }
