@@ -169,4 +169,57 @@ header {
     width: fit-content;
     transform: translateX(0); } }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  background-color: #fff; }
+  main * {
+    color: #3F4150; }
+  main h2 {
+    font-size: 2rem;
+    margin-bottom: 20px; }
+  main section {
+    display: flex;
+    align-items: center;
+    width: 100%; }
+    main section .icon-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      width: 50%;
+      margin-right: 25px; }
+      main section .icon-wrap .skill-item {
+        width: fit-content;
+        height: 12vh;
+        margin-bottom: 15px; }
+        main section .icon-wrap .skill-item img {
+          width: 150px;
+          height: 100%;
+          object-fit: contain; }
+        main section .icon-wrap .skill-item .html,
+        main section .icon-wrap .skill-item .js {
+          width: 150px;
+          height: 150px; }
+        main section .icon-wrap .skill-item .css {
+          width: 110px;
+          height: 150px; }
+        main section .icon-wrap .skill-item:nth-child(2) {
+          margin-left: 20px; }
+        main section .icon-wrap .skill-item:nth-child(3) {
+          margin-left: 15px;
+          margin-bottom: 0;
+          transform: translateY(-15%); }
+    main section .skill-desc {
+      width: 50%;
+      margin-left: 25px; }
+      main section .skill-desc p {
+        margin-bottom: 15px;
+        font-size: 1.5rem; }
+        main section .skill-desc p:last-child {
+          margin-bottom: 0; }
+
 /*# sourceMappingURL=style.css.map */
