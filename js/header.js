@@ -4,6 +4,11 @@ const headerRightBar = document.querySelector(".right-bar");
 const headerBottomBar = document.querySelector(".bottom-bar");
 const nav = document.querySelector("nav");
 const hederTitle = document.querySelector("#header-title");
+const sideBar = document.querySelector(".nav-mo");
+const sideBarItem = document.querySelector(".nav-mo ul");
+const sideBarButton = document.querySelector(".sidebar-button");
+const bottomArrow = document.querySelectorAll(".bottom-arrow i");
+console.log(bottomArrow[0]);
 
 window.onload = () => {
   setTimeout(() => {
@@ -19,16 +24,24 @@ window.onload = () => {
     headerBottomBar.style.animation = "bottomAni 3s";
   }, 2300);
   setTimeout(() => {
-    nav.style.animation = "nav-move 1s forwards";
+    nav.style.animation = "nav-move 2s forwards";
+  }, 8000);
+  setTimeout(() => {
+    bottomArrow[0].style.animation = "arrow 1s infinite";
+    bottomArrow[1].style.animation = "arrow 1s 0.1s infinite";
+    bottomArrow[2].style.animation = "arrow 1s 0.2s infinite";
+    bottomArrow.forEach((item) => {
+      item.style.display = "block";
+    });
   }, 8000);
 };
 
-// window.onload = () => {
-//   headerRightBar.style.animation = "rightAni 3s";
-//   headerBottomBar.style.animation = "bottomAni 3s";
-//   headerLeftBar.style.animation = "leftAni 3s";
-//   headerTopBar.style.animation = "topAni 3s";
-// };
+//sdie-bar on/off
+sideBarButton.addEventListener("click", () => {
+  sideBar.classList.toggle("active");
+  sideBarItem.classList.toggle("active");
+  sideBarButton.classList.toggle("active");
+});
 
 new TypeIt("#header-title", { startDelay: 3000 })
   .type("안녕하세요,", { delay: 1000 })
