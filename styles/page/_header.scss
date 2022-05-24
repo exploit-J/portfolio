@@ -5,27 +5,29 @@ header {
   background-color: $primary;
   overflow: hidden;
 
-  nav {
+  .nav-pc {
     position: fixed;
+    display: flex;
+    align-items: center;
     top: 15px;
     left: 25px;
     width: 100%;
     height: 3vh;
     background-color: #fff;
     border-radius: 4px;
-    // transform: translateX(100vw);
+    transform: translateX(100vw);
+    @include responsive {
+      display: none;
+    }
     ul {
       display: flex;
+      padding: 5px 20px;
       li {
         position: relative;
         padding: 5px 2px;
         margin-right: 20px;
         transition: 0.5s;
         cursor: pointer;
-
-        &:first-child {
-          margin-left: 20px;
-        }
 
         &:last-child {
           margin-right: 0;
@@ -53,6 +55,60 @@ header {
     }
   }
 
+  .nav-mo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+    width: 45px;
+    background-color: #fff;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    color: $primary;
+
+    .sidebar-button {
+      margin: 5px 0;
+      font-size: 1.5rem;
+      transition: 0.5s;
+      cursor: pointer;
+
+      &.active {
+        transform: rotate(90deg);
+      }
+    }
+
+    ul {
+      width: 100%;
+      max-height: 0;
+      transition: 0.5s;
+      transform: translateY(-300px);
+      opacity: 0;
+      &.active {
+        max-height: 200px;
+        transform: translateY(0);
+        opacity: 1;
+      }
+      li {
+        display: flex;
+        justify-content: center;
+        padding: 8px 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    @include responsive {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
   #header-title {
     position: absolute;
     top: 50%;
@@ -60,8 +116,12 @@ header {
     transform: translate(-50%, -50%);
     color: $white;
     text-align: center;
-
     background-color: transparent;
+
+    @include responsive {
+      width: 100%;
+      font-size: 1.5rem;
+    }
   }
 
   .top-bar {
@@ -73,6 +133,9 @@ header {
     background: linear-gradient(to right, $blue, transparent);
     overflow: hidden;
     transform: translateX(-100%);
+    @include responsive {
+      height: 10%;
+    }
   }
 
   .left-bar {
@@ -84,6 +147,9 @@ header {
     background: linear-gradient(to top, $red, transparent);
     overflow: hidden;
     transform: translateY(-100%);
+    @include responsive {
+      width: 20%;
+    }
   }
   .right-bar {
     position: absolute;
@@ -94,6 +160,9 @@ header {
     background: linear-gradient(to bottom, $green, transparent);
     overflow: hidden;
     transform: translateY(-100%);
+    @include responsive {
+      width: 20%;
+    }
   }
   .bottom-bar {
     position: absolute;
@@ -104,6 +173,46 @@ header {
     background: linear-gradient(to left, $blue-light, transparent);
     overflow: hidden;
     transform: translateX(100%);
+    @include responsive {
+      height: 10%;
+    }
+  }
+
+  .bottom-arrow {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+
+    i {
+      display: none;
+      &:first-child {
+        font-size: 1.1rem;
+      }
+
+      &:nth-child(2) {
+        font-size: 1.5rem;
+        transform: translateY(-8px);
+      }
+
+      &:last-child {
+        font-size: 3rem;
+        transform: translateY(-28px);
+      }
+    }
+  }
+}
+
+@keyframes arrow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -136,8 +245,8 @@ header {
     transform: translateX(0);
   }
   90% {
-    width: 15%;
     transform: translateX(30%);
+    width: 25%;
   }
   96% {
     transform: translateX(0);
