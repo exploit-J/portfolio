@@ -260,8 +260,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 60vh;
-  background-color: #fff;
   overflow: hidden; }
   @media screen and (max-width: 1024px) {
     main {
@@ -269,17 +267,110 @@ main {
   main * {
     color: #3F4150; }
   main h2 {
+    width: 95%;
+    margin-bottom: 20px;
     font-size: 4rem;
-    margin-bottom: 20px; }
+    text-align: center; }
+    main h2::after {
+      content: "";
+      display: block;
+      border-bottom: 1px solid #E0E2E7;
+      transform: scale(0);
+      animation: border-scale 1s forwards; }
     @media screen and (max-width: 1024px) {
       main h2 {
         font-size: 2rem; } }
+
+@keyframes border-scale {
+  to {
+    transform: scale(1); } }
+
+@keyframes to-right {
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+  main .about-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; }
+    @media screen and (max-width: 1024px) {
+      main .about-wrap {
+        height: fit-content; } }
+    main .about-wrap * {
+      color: #fff; }
+    main .about-wrap .about {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%; }
+      @media screen and (max-width: 1024px) {
+        main .about-wrap .about {
+          flex-direction: column; } }
+      main .about-wrap .about .img {
+        position: relative;
+        width: 100%;
+        min-width: 150px;
+        max-width: 450px;
+        margin-right: 5%;
+        opacity: 0;
+        transform: translateX(-40%);
+        animation: to-right 1s forwards; }
+        @media screen and (max-width: 1024px) {
+          main .about-wrap .about .img {
+            width: 50%;
+            margin-bottom: 20px;
+            margin-right: 0; } }
+        main .about-wrap .about .img::after {
+          content: "";
+          display: block;
+          padding-bottom: 100%; }
+        main .about-wrap .about .img img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover; }
+      main .about-wrap .about .introduce {
+        letter-spacing: 1.2px;
+        transform: translateX(-55%);
+        animation: to-right 1s forwards; }
+        @media screen and (max-width: 1024px) {
+          main .about-wrap .about .introduce {
+            padding: 0 20px;
+            letter-spacing: 0; } }
+        main .about-wrap .about .introduce p {
+          margin-bottom: 30px; }
+          main .about-wrap .about .introduce p strong {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 1.3rem; }
+            @media screen and (max-width: 1024px) {
+              main .about-wrap .about .introduce p strong {
+                font-size: 1rem; } }
+          main .about-wrap .about .introduce p .indent-none {
+            font-size: 1.1rem;
+            text-indent: 0; }
+          main .about-wrap .about .introduce p span {
+            display: block;
+            margin: 6px 0;
+            text-indent: 1rem; }
+          @media screen and (max-width: 1024px) {
+            main .about-wrap .about .introduce p {
+              font-size: 0.9rem; } }
   main .skill {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    max-width: 1800px; }
+    height: 50vh;
+    background-color: #fff; }
+    @media screen and (max-width: 1024px) {
+      main .skill {
+        height: fit-content; } }
     main .skill .desc {
       display: flex;
       align-items: center;

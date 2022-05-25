@@ -3,8 +3,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 60vh;
-  background-color: #fff;
   overflow: hidden;
   @include responsive {
     height: fit-content;
@@ -13,19 +11,129 @@ main {
     color: $primary;
   }
   h2 {
-    font-size: 4rem;
+    width: 95%;
     margin-bottom: 20px;
+    font-size: 4rem;
+    text-align: center;
+    &::after {
+      content: "";
+      display: block;
+      border-bottom: 1px solid $border;
+      transform: scale(0);
+      animation: border-scale 1s forwards;
+    }
     @include responsive {
       font-size: 2rem;
     }
   }
 
+  @keyframes border-scale {
+    to {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes to-right {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .about-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    @include responsive {
+      height: fit-content;
+    }
+
+    * {
+      color: #fff;
+    }
+    .about {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      @include responsive {
+        flex-direction: column;
+      }
+      .img {
+        position: relative;
+        width: 100%;
+        min-width: 150px;
+        max-width: 450px;
+        margin-right: 5%;
+        opacity: 0;
+        transform: translateX(-40%);
+        animation: to-right 1s forwards;
+        @include responsive {
+          width: 50%;
+          margin-bottom: 20px;
+          margin-right: 0;
+        }
+        &::after {
+          content: "";
+          display: block;
+          padding-bottom: 100%;
+        }
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      .introduce {
+        letter-spacing: 1.2px;
+        transform: translateX(-55%);
+        animation: to-right 1s forwards;
+        @include responsive {
+          padding: 0 20px;
+          letter-spacing: 0;
+        }
+        p {
+          margin-bottom: 30px;
+          strong {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 1.3rem;
+            @include responsive {
+              font-size: 1rem;
+            }
+          }
+          .indent-none {
+            font-size: 1.1rem;
+            text-indent: 0;
+          }
+          span {
+            display: block;
+            margin: 6px 0;
+            text-indent: 1rem;
+          }
+          @include responsive {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
   .skill {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    max-width: 1800px;
+    height: 50vh;
+    background-color: #fff;
+    @include responsive {
+      height: fit-content;
+    }
     .desc {
       display: flex;
       align-items: center;
