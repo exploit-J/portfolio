@@ -10,6 +10,7 @@ const sideBarButton = document.querySelector(".sidebar-button");
 const bottomArrow = document.querySelectorAll(".bottom-arrow i");
 const toTopButton = document.querySelector(".top-button");
 const sideBarLi = document.querySelectorAll(".nav-mo-wrap li");
+const navBarLI = document.querySelectorAll(".nav-pc li");
 const mainSectionTitle = document.querySelectorAll("main h2");
 const footer = document.querySelector("footer");
 
@@ -57,9 +58,9 @@ new TypeIt("#header-title", { startDelay: 3000 })
 
 // move to top button
 const topButtonActive = () => {
-  if (window.scrollY >= 600) {
+  if (window.scrollY >= 800) {
     toTopButton.classList.add("active");
-  } else if (window.scrollY < 600) {
+  } else if (window.scrollY < 800) {
     toTopButton.classList.remove("active");
   }
 };
@@ -71,6 +72,20 @@ toTopButton.addEventListener("click", () => {
 });
 
 // move to section
+// PC
+navBarLI[0].addEventListener("click", () => {
+  mainSectionTitle[0].scrollIntoView({ behavior: "smooth", block: "start" });
+});
+navBarLI[1].addEventListener("click", () => {
+  mainSectionTitle[1].scrollIntoView({ behavior: "smooth", block: "start" });
+});
+navBarLI[2].addEventListener("click", () => {
+  mainSectionTitle[2].scrollIntoView({ behavior: "smooth", block: "start" });
+});
+navBarLI[3].addEventListener("click", () => {
+  footer.scrollIntoView({ behavior: "smooth", block: "start" });
+});
+// MOBILE
 sideBarLi[0].addEventListener("click", () => {
   mainSectionTitle[0].scrollIntoView({ behavior: "smooth", block: "start" });
 });
