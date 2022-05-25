@@ -15,11 +15,17 @@
       src="https://kit.fontawesome.com/a6829024a8.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="https://unpkg.com/typeit@8.5.4/dist/index.umd.js"></script>
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <!-- <header>
+    <header>
       <nav class="nav-pc">
         <ul>
           <li>About</li>
@@ -29,27 +35,35 @@
         </ul>
       </nav>
       <nav class="nav-mo">
-        <button class="sidebar-button" type="button">
-          <i class="fa-solid fa-ellipsis"></i>
+        <div class="nav-mo-wrap">
+          <button class="sidebar-button" type="button">
+            <i class="fa-solid fa-ellipsis"></i>
+          </button>
+          <ul>
+            <li title="About me"><i class="fa-solid fa-user"></i></li>
+            <li title="Skill">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </li>
+            <li title="Portfolio"><i class="fa-solid fa-folder-open"></i></li>
+            <li title="Contact"><i class="fa-solid fa-square-phone"></i></li>
+          </ul>
+        </div>
+        <button class="top-button" type="button">
+          <i class="fa-solid fa-arrow-up-long"></i>
         </button>
-        <ul>
-          <li title="About me"><i class="fa-solid fa-user"></i></li>
-          <li title="Skill"><i class="fa-solid fa-screwdriver-wrench"></i></li>
-          <li title="Portfolio"><i class="fa-solid fa-folder-open"></i></li>
-          <li title="Contact"><i class="fa-solid fa-square-phone"></i></li>
-        </ul>
       </nav>
       <h1 id="header-title"></h1>
       <div class="top-bar"></div>
       <div class="left-bar"></div>
       <div class="right-bar"></div>
       <div class="bottom-bar"></div>
+
       <div class="bottom-arrow">
         <i class="fa-solid fa-angle-down"></i>
         <i class="fa-solid fa-angle-down"></i>
         <i class="fa-solid fa-angle-down"></i>
       </div>
-    </header> -->
+    </header>
     <main>
       <section class="about-wrap">
         <h2>About Me</h2>
@@ -74,8 +88,8 @@
               의지입니다.<br />
               당연한 얘기일수도 있지만, 단 한번도 결근하지 않았으며 주어진
               업무는 성실하게 처리하였습니다.<br />
-              반대로 단점은 약간 우유부단하다는 소릴 듣곤했는데, 이는 신중한
-              결정을 하기 위함입니다.<br />
+              단점은 약간 우유부단하다는 소릴 듣곤했는데, 이는 신중한 결정을
+              하기 위함입니다.<br />
               저의 결정으로인해 영향을 받는 부서나 협력사들의 불편함을
               최소화하기 위해 여러 고민을 했기 때문입니다.<br />
               하지만 결정된 내용에 대해서는 반드시 이행하는 의지를 동반하고
@@ -95,7 +109,7 @@
               확인하며,<br />
               주변 동료 및 유관부서와의 커뮤니케이션을 중요하게 여겼고 여러
               개선효과를 달성했습니다.<br />
-              이런 습관을 유지하며 웹 개발에 있어 더 좋은 코드를 위한 고민을
+              이런 습관을 유지하여 웹 개발에 있어 더 좋은 코드를 위한 고민을
               계속 하겠습니다.
             </p>
           </div>
@@ -162,9 +176,11 @@
           </div>
         </div>
       </section>
+      <section>
+        <h2>Portfolio</h2>
+      </section>
     </main>
     <footer>footer</footer>
-
     <script src="js/header.js"></script>
     <script src="js/main.js"></script>
   </body>
