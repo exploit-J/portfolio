@@ -7,12 +7,15 @@ const hederTitle = document.querySelector("#header-title");
 const sideBar = document.querySelector(".nav-mo");
 const sideBarUl = document.querySelector(".nav-mo ul");
 const sideBarButton = document.querySelector(".sidebar-button");
-const bottomArrow = document.querySelectorAll(".bottom-arrow i");
+const bottomArrow = document.querySelectorAll(".arrow");
 const toTopButton = document.querySelector(".top-button-mo");
 const sideBarLi = document.querySelectorAll(".nav-mo-wrap li");
 const navBarLI = document.querySelectorAll(".nav-pc li");
 const mainSectionTitle = document.querySelectorAll("main h2");
 const footer = document.querySelector("footer");
+const mainHeader = document.querySelector("header");
+
+history.scrollRestoration = "manual";
 
 // 페이지랜딩 이벤트
 window.onload = () => {
@@ -58,9 +61,9 @@ new TypeIt("#header-title", { startDelay: 3000 })
 
 // move to top button
 const topButtonActive = () => {
-  if (window.scrollY >= 800) {
+  if (window.scrollY >= mainHeader.offsetHeight * 0.8) {
     toTopButton.classList.add("active");
-  } else if (window.scrollY < 800) {
+  } else if (window.scrollY < mainHeader.offsetHeight * 0.8) {
     toTopButton.classList.remove("active");
   }
 };
