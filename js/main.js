@@ -7,13 +7,12 @@ const aboutSection = document.querySelector(".about-wrap");
 const toTopButton_PC = document.querySelector(".top-button-pc");
 const skillIcon = document.querySelector(".icon-wrap");
 const skillDesc = document.querySelector(".skill-desc");
-console.log(sectionTitle);
 
 // section appear event
 const sectionEvent = () => {
-  console.log(window.scrollY);
-  console.log("about Y", header.offsetHeight * 0.8);
-  console.log("skill Y", header.offsetHeight + aboutSection.offsetHeight * 0.8);
+  // console.log(window.scrollY);
+  // console.log("about Y", header.offsetHeight * 0.8);
+  // console.log("skill Y", header.offsetHeight + aboutSection.offsetHeight * 0.8);
   if (window.scrollY > header.offsetHeight * 0.8) {
     sectionTitle[0].style.animation = "title-appear 2s forwards";
     titleBorder[0].style.animation = "border-scale 1s forwards";
@@ -31,9 +30,9 @@ window.addEventListener("scroll", _.throttle(sectionEvent, 300));
 
 // move to top active
 const topButtonActivePC = () => {
-  if (window.scrollY >= 2000) {
+  if (window.scrollY >= header.offsetHeight * 1.1) {
     toTopButton_PC.classList.add("active");
-  } else if (window.scrollY < 2000) {
+  } else if (window.scrollY < header.offsetHeight * 1.1) {
     toTopButton_PC.classList.remove("active");
   }
 };
