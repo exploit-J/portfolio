@@ -233,7 +233,6 @@ main {
     background-color: $red;
     border-radius: 12px;
     font-size: 1.2rem;
-    transition: 0.5s;
     opacity: 0.8;
     transform: translateX(8vw);
     animation: top-button-pc-out 0.5s forwards;
@@ -241,7 +240,6 @@ main {
       display: none;
     }
     &.active {
-      display: flex;
       animation: top-button-pc-in 0.5s forwards;
     }
     &:hover {

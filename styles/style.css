@@ -235,16 +235,16 @@ header {
     transform: translateX(-50%);
     color: white;
     text-align: center; }
-    header .bottom-arrow i {
-      display: none; }
-      header .bottom-arrow i:first-child {
-        font-size: 2rem; }
-      header .bottom-arrow i:nth-child(2) {
-        font-size: 2rem;
-        transform: translateY(-18px); }
-      header .bottom-arrow i:last-child {
-        font-size: 2rem;
-        transform: translateY(-36px); }
+    header .bottom-arrow .arrow {
+      display: none;
+      font-size: 1.5rem; }
+      @media screen and (max-width: 1024px) {
+        header .bottom-arrow .arrow {
+          font-size: 1rem; } }
+      header .bottom-arrow .arrow:nth-child(2) {
+        transform: translateY(-10px); }
+      header .bottom-arrow .arrow:last-child {
+        transform: translateY(-20px); }
 
 @keyframes arrow {
   from {
@@ -485,7 +485,6 @@ main {
     background-color: #F86D7D;
     border-radius: 12px;
     font-size: 1.2rem;
-    transition: 0.5s;
     opacity: 0.8;
     transform: translateX(8vw);
     animation: top-button-pc-out 0.5s forwards; }
@@ -493,7 +492,6 @@ main {
       main .top-button-pc {
         display: none; } }
     main .top-button-pc.active {
-      display: flex;
       animation: top-button-pc-in 0.5s forwards; }
     main .top-button-pc:hover {
       opacity: 1; }

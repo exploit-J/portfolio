@@ -223,20 +223,17 @@ header {
     color: white;
     text-align: center;
 
-    i {
+    .arrow {
       display: none;
-      &:first-child {
-        font-size: 2rem;
+      font-size: 1.5rem;
+      @include responsive {
+        font-size: 1rem;
       }
-
       &:nth-child(2) {
-        font-size: 2rem;
-        transform: translateY(-18px);
+        transform: translateY(-10px);
       }
-
       &:last-child {
-        font-size: 2rem;
-        transform: translateY(-36px);
+        transform: translateY(-20px);
       }
     }
   }
