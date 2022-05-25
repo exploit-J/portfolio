@@ -121,9 +121,6 @@ main {
     width: 100%;
     height: 100vh;
     background-color: #fff;
-    @include responsive {
-      height: fit-content;
-    }
     .desc {
       display: flex;
       align-items: center;
@@ -238,7 +235,7 @@ main {
     font-size: 1.2rem;
     transition: 0.5s;
     opacity: 0.8;
-    transform: translateX(6vw);
+    transform: translateX(8vw);
     animation: top-button-pc-out 0.5s forwards;
     @include responsive {
       display: none;
@@ -269,7 +266,7 @@ main {
     transform: translateX(-1vh);
   }
   100% {
-    transform: translateX(6vw);
+    transform: translateX(8vw);
   }
 }
 

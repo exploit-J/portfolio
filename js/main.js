@@ -12,13 +12,15 @@ console.log(sectionTitle);
 // section appear event
 const sectionEvent = () => {
   console.log(window.scrollY);
-  if (window.scrollY > header.offsetHeight * 0.5) {
+  console.log("about Y", header.offsetHeight * 0.8);
+  console.log("skill Y", header.offsetHeight + aboutSection.offsetHeight * 0.8);
+  if (window.scrollY > header.offsetHeight * 0.8) {
     sectionTitle[0].style.animation = "title-appear 2s forwards";
     titleBorder[0].style.animation = "border-scale 1s forwards";
     aboutImage.style.animation = "side-move 1s forwards";
     aboutIntroduce.style.animation = "side-move 1s forwards";
   }
-  if (window.scrollY > header.offsetHeight + aboutSection.offsetHeight * 0.5) {
+  if (window.scrollY >= header.offsetHeight + aboutSection.offsetHeight * 0.8) {
     sectionTitle[1].style.animation = "title-appear 2s forwards";
     titleBorder[1].style.animation = "border-scale 1s forwards";
     skillIcon.style.animation = "side-move 1s forwards";
