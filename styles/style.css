@@ -242,8 +242,14 @@ header {
           font-size: 1rem; } }
       header .bottom-arrow .arrow:nth-child(2) {
         transform: translateY(-10px); }
+        @media screen and (max-width: 1024px) {
+          header .bottom-arrow .arrow:nth-child(2) {
+            transform: translateY(0); } }
       header .bottom-arrow .arrow:last-child {
         transform: translateY(-20px); }
+        @media screen and (max-width: 1024px) {
+          header .bottom-arrow .arrow:last-child {
+            transform: translateY(0); } }
   header .top-button-pc {
     position: fixed;
     top: 50%;
@@ -427,17 +433,23 @@ main {
         .about .about-wrap .introduce p strong {
           display: block;
           margin-bottom: 4px;
-          font-size: 1.3rem; }
+          font-size: 1.5rem; }
           @media screen and (max-width: 1024px) {
             .about .about-wrap .introduce p strong {
-              font-size: 1rem; } }
+              font-size: 1.4rem; } }
         .about .about-wrap .introduce p .indent-none {
+          margin-top: 4px;
           font-size: 1.1rem;
-          text-indent: 0; }
+          text-decoration: underline; }
         .about .about-wrap .introduce p span {
           display: block;
           margin: 6px 0;
           text-indent: 1rem; }
+        .about .about-wrap .introduce p .point {
+          display: inline;
+          padding: 0 4px;
+          background-color: #F86D7D;
+          border-radius: 4px; }
 
 .skill {
   display: flex;
