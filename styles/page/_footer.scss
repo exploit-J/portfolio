@@ -1,5 +1,38 @@
 footer {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+  background-color: $background;
+  color: $primary;
+
+  .thx {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    i {
+      font-size: 3rem;
+    }
+    .mail {
+    }
+    .phone {
+    }
+    .github {
+    }
+    dd {
+      margin-bottom: 16px;
+    }
+  }
 
   .blog-icon {
     img {
