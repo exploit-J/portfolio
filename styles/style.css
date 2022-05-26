@@ -65,7 +65,7 @@ header {
     background-color: #fff;
     border-radius: 4px;
     transform: translateX(100vw);
-    z-index: 10; }
+    z-index: 30; }
     @media screen and (max-width: 1024px) {
       header .nav-pc {
         display: none; } }
@@ -85,7 +85,6 @@ header {
         header .nav-pc ul li::after {
           position: absolute;
           left: 0;
-          bottom: -1px;
           display: block;
           content: "";
           width: 100%;
@@ -100,7 +99,7 @@ header {
     right: 20px;
     display: none;
     transform: translateY(-20px);
-    z-index: 10; }
+    z-index: 30; }
     @media screen and (max-width: 1024px) {
       header .nav-mo {
         display: flex;
@@ -245,6 +244,28 @@ header {
         transform: translateY(-10px); }
       header .bottom-arrow .arrow:last-child {
         transform: translateY(-20px); }
+  header .top-button-pc {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    background-color: #F86D7D;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    transform: translateX(8vw);
+    animation: top-button-pc-out 0.5s forwards;
+    z-index: 30; }
+    @media screen and (max-width: 1024px) {
+      header .top-button-pc {
+        display: none; } }
+    header .top-button-pc.active {
+      animation: top-button-pc-in 0.5s forwards; }
+    header .top-button-pc:hover {
+      opacity: 1; }
 
 @keyframes arrow {
   from {
@@ -295,8 +316,6 @@ main {
   @media screen and (max-width: 1024px) {
     main {
       height: fit-content; } }
-  main * {
-    color: #3F4150; }
   main h2 {
     width: 100%;
     font-size: 4rem;
@@ -312,189 +331,6 @@ main {
     margin-bottom: 20px;
     border-bottom: 3px solid #E0E2E7;
     transform: scaleX(0); }
-  main .about-wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh; }
-    @media screen and (max-width: 1024px) {
-      main .about-wrap {
-        height: fit-content; } }
-    main .about-wrap * {
-      color: #fff; }
-    main .about-wrap .about {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      padding: 0 20px; }
-      @media screen and (max-width: 1024px) {
-        main .about-wrap .about {
-          flex-direction: column; } }
-      main .about-wrap .about .img {
-        position: relative;
-        width: 100%;
-        min-width: 150px;
-        max-width: 450px;
-        margin-right: 5%;
-        opacity: 0;
-        transform: translateX(-40%); }
-        @media screen and (max-width: 1024px) {
-          main .about-wrap .about .img {
-            width: 50%;
-            margin-bottom: 20px;
-            margin-right: 0; } }
-        main .about-wrap .about .img::after {
-          content: "";
-          display: block;
-          padding-bottom: 100%; }
-        main .about-wrap .about .img img {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          border-radius: 50%;
-          object-fit: cover; }
-      main .about-wrap .about .introduce {
-        letter-spacing: 1.2px;
-        transform: translateX(-55%);
-        opacity: 0; }
-        @media screen and (max-width: 1024px) {
-          main .about-wrap .about .introduce {
-            letter-spacing: 0; } }
-        main .about-wrap .about .introduce p {
-          margin-bottom: 30px; }
-          @media screen and (max-width: 1024px) {
-            main .about-wrap .about .introduce p {
-              font-size: 0.9rem;
-              line-height: 180%; } }
-          main .about-wrap .about .introduce p strong {
-            display: block;
-            margin-bottom: 4px;
-            font-size: 1.3rem; }
-            @media screen and (max-width: 1024px) {
-              main .about-wrap .about .introduce p strong {
-                font-size: 1rem; } }
-          main .about-wrap .about .introduce p .indent-none {
-            font-size: 1.1rem;
-            text-indent: 0; }
-          main .about-wrap .about .introduce p span {
-            display: block;
-            margin: 6px 0;
-            text-indent: 1rem; }
-  main .skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    background-color: #fff; }
-    main .skill .desc {
-      display: flex;
-      align-items: center;
-      width: 100%; }
-      @media screen and (max-width: 1024px) {
-        main .skill .desc {
-          flex-direction: column; } }
-      main .skill .desc .icon-wrap {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: center;
-        width: 40%;
-        margin-right: 25px;
-        transform: translateX(85%);
-        opacity: 0; }
-        @media screen and (max-width: 1024px) {
-          main .skill .desc .icon-wrap {
-            width: 100%;
-            margin-right: 0;
-            margin-bottom: 20px; } }
-        main .skill .desc .icon-wrap .skill-item {
-          width: fit-content;
-          height: fit-content;
-          margin-bottom: 15px; }
-          @media screen and (max-width: 1024px) {
-            main .skill .desc .icon-wrap .skill-item {
-              display: flex;
-              justify-content: center;
-              width: 100%; } }
-          main .skill .desc .icon-wrap .skill-item img {
-            width: 150px;
-            height: 100%;
-            object-fit: contain; }
-            @media screen and (max-width: 1024px) {
-              main .skill .desc .icon-wrap .skill-item img {
-                width: 100px; } }
-          main .skill .desc .icon-wrap .skill-item .html,
-          main .skill .desc .icon-wrap .skill-item .js {
-            width: 150px;
-            height: 150px; }
-            @media screen and (max-width: 1024px) {
-              main .skill .desc .icon-wrap .skill-item .html,
-              main .skill .desc .icon-wrap .skill-item .js {
-                width: 95px;
-                height: 95px; } }
-          main .skill .desc .icon-wrap .skill-item .css {
-            width: 110px;
-            height: 150px; }
-            @media screen and (max-width: 1024px) {
-              main .skill .desc .icon-wrap .skill-item .css {
-                width: 70px;
-                height: 95px; } }
-          @media screen and (max-width: 1024px) {
-            main .skill .desc .icon-wrap .skill-item:first-child {
-              display: flex; } }
-          main .skill .desc .icon-wrap .skill-item:nth-child(2) {
-            margin-left: 20px; }
-          main .skill .desc .icon-wrap .skill-item:last-child {
-            margin-left: 15px;
-            margin-bottom: 0; }
-      main .skill .desc .skill-desc {
-        width: 50%;
-        margin-left: 25px;
-        transform: translateX(50%);
-        opacity: 0; }
-        @media screen and (max-width: 1024px) {
-          main .skill .desc .skill-desc {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            margin-left: 0;
-            margin-bottom: 20px; } }
-        main .skill .desc .skill-desc p {
-          margin-bottom: 20px;
-          font-size: 1.5rem; }
-          @media screen and (max-width: 1024px) {
-            main .skill .desc .skill-desc p {
-              padding: 0 10px;
-              font-size: 1rem; } }
-          main .skill .desc .skill-desc p:last-child {
-            margin-bottom: 0; }
-  main .top-button-pc {
-    position: fixed;
-    top: 50%;
-    right: 20px;
-    justify-content: center;
-    align-items: center;
-    width: 55px;
-    height: 55px;
-    background-color: #F86D7D;
-    border-radius: 12px;
-    font-size: 1.2rem;
-    opacity: 0.8;
-    transform: translateX(8vw);
-    animation: top-button-pc-out 0.5s forwards; }
-    @media screen and (max-width: 1024px) {
-      main .top-button-pc {
-        display: none; } }
-    main .top-button-pc.active {
-      animation: top-button-pc-in 0.5s forwards; }
-    main .top-button-pc:hover {
-      opacity: 1; }
 
 @keyframes top-button-pc-in {
   90% {
@@ -522,5 +358,300 @@ main {
 @keyframes title-appear {
   to {
     opacity: 1; } }
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh; }
+  @media screen and (max-width: 1024px) {
+    .about {
+      height: fit-content; } }
+  .about * {
+    color: #fff; }
+  .about .about-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px; }
+    @media screen and (max-width: 1024px) {
+      .about .about-wrap {
+        flex-direction: column; } }
+    .about .about-wrap .img {
+      position: relative;
+      width: 100%;
+      min-width: 150px;
+      max-width: 450px;
+      margin-right: 5%;
+      opacity: 0;
+      transform: translateX(-40%); }
+      @media screen and (max-width: 1024px) {
+        .about .about-wrap .img {
+          width: 50%;
+          margin-bottom: 20px;
+          margin-right: 0; } }
+      .about .about-wrap .img::after {
+        content: "";
+        display: block;
+        padding-bottom: 100%; }
+      .about .about-wrap .img img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover; }
+    .about .about-wrap .introduce {
+      letter-spacing: 1.2px;
+      transform: translateX(-55%);
+      opacity: 0; }
+      @media screen and (max-width: 1024px) {
+        .about .about-wrap .introduce {
+          letter-spacing: 0; } }
+      .about .about-wrap .introduce p {
+        margin-bottom: 30px; }
+        @media screen and (max-width: 1024px) {
+          .about .about-wrap .introduce p {
+            font-size: 0.9rem;
+            line-height: 180%; } }
+        .about .about-wrap .introduce p strong {
+          display: block;
+          margin-bottom: 4px;
+          font-size: 1.3rem; }
+          @media screen and (max-width: 1024px) {
+            .about .about-wrap .introduce p strong {
+              font-size: 1rem; } }
+        .about .about-wrap .introduce p .indent-none {
+          font-size: 1.1rem;
+          text-indent: 0; }
+        .about .about-wrap .introduce p span {
+          display: block;
+          margin: 6px 0;
+          text-indent: 1rem; }
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff; }
+  .skill * {
+    color: #3F4150; }
+  .skill .desc {
+    display: flex;
+    align-items: center;
+    width: 100%; }
+    @media screen and (max-width: 1024px) {
+      .skill .desc {
+        flex-direction: column; } }
+    .skill .desc .icon-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      width: 40%;
+      margin-right: 25px;
+      transform: translateX(85%);
+      opacity: 0; }
+      @media screen and (max-width: 1024px) {
+        .skill .desc .icon-wrap {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 20px; } }
+      .skill .desc .icon-wrap .skill-item {
+        width: fit-content;
+        height: fit-content;
+        margin-bottom: 15px; }
+        @media screen and (max-width: 1024px) {
+          .skill .desc .icon-wrap .skill-item {
+            display: flex;
+            justify-content: center;
+            width: 100%; } }
+        .skill .desc .icon-wrap .skill-item img {
+          width: 150px;
+          height: 100%;
+          object-fit: contain; }
+          @media screen and (max-width: 1024px) {
+            .skill .desc .icon-wrap .skill-item img {
+              width: 100px; } }
+        .skill .desc .icon-wrap .skill-item .html,
+        .skill .desc .icon-wrap .skill-item .js {
+          width: 150px;
+          height: 150px; }
+          @media screen and (max-width: 1024px) {
+            .skill .desc .icon-wrap .skill-item .html,
+            .skill .desc .icon-wrap .skill-item .js {
+              width: 95px;
+              height: 95px; } }
+        .skill .desc .icon-wrap .skill-item .css {
+          width: 110px;
+          height: 150px; }
+          @media screen and (max-width: 1024px) {
+            .skill .desc .icon-wrap .skill-item .css {
+              width: 70px;
+              height: 95px; } }
+        @media screen and (max-width: 1024px) {
+          .skill .desc .icon-wrap .skill-item:first-child {
+            display: flex; } }
+        .skill .desc .icon-wrap .skill-item:nth-child(2) {
+          margin-left: 20px; }
+        .skill .desc .icon-wrap .skill-item:last-child {
+          margin-left: 15px;
+          margin-bottom: 0; }
+    .skill .desc .skill-desc {
+      width: 50%;
+      margin-left: 25px;
+      transform: translateX(50%);
+      opacity: 0; }
+      @media screen and (max-width: 1024px) {
+        .skill .desc .skill-desc {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          margin-left: 0;
+          margin-bottom: 20px; } }
+      .skill .desc .skill-desc p {
+        margin-bottom: 20px;
+        font-size: 1.5rem; }
+        @media screen and (max-width: 1024px) {
+          .skill .desc .skill-desc p {
+            padding: 0 10px;
+            font-size: 1rem; } }
+        .skill .desc .skill-desc p:last-child {
+          margin-bottom: 0; }
+
+.portfolio {
+  width: 100%;
+  height: 100vh; }
+  .portfolio * {
+    color: white; }
+  .portfolio .pf-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh; }
+    .portfolio .pf-wrapper .pf-item {
+      position: absolute;
+      width: 25%;
+      min-width: 380px;
+      background-color: #E0E2E7;
+      border: 1px solid #E0E2E7;
+      border-radius: 4px;
+      transition: 0.5s; }
+      @media screen and (max-width: 1024px) {
+        .portfolio .pf-wrapper .pf-item {
+          position: static; } }
+      .portfolio .pf-wrapper .pf-item:hover {
+        z-index: 30 !important; }
+      .portfolio .pf-wrapper .pf-item:hover .overlay {
+        opacity: 1; }
+      .portfolio .pf-wrapper .pf-item .info {
+        width: fit-content;
+        transition: 0.5s;
+        height: 2vh; }
+        .portfolio .pf-wrapper .pf-item .info .title {
+          display: block;
+          width: 100%;
+          height: 2.2vh;
+          margin: 0;
+          padding: 0 4px;
+          background-color: #E0E2E7;
+          color: #3F4150; }
+      .portfolio .pf-wrapper .pf-item .img-pc {
+        position: relative;
+        width: 100%;
+        margin-top: 1.8vh;
+        transform: translateY(4px); }
+        .portfolio .pf-wrapper .pf-item .img-pc img {
+          width: 100%; }
+      .portfolio .pf-wrapper .pf-item.pf {
+        top: 0;
+        left: 27%;
+        z-index: 3; }
+      .portfolio .pf-wrapper .pf-item.nf {
+        top: 30%;
+        left: 27%;
+        z-index: 4; }
+      .portfolio .pf-wrapper .pf-item.wt {
+        top: 60%;
+        left: 27%;
+        z-index: 5; }
+      .portfolio .pf-wrapper .pf-item.fl {
+        top: 15%;
+        right: 27%;
+        z-index: 6; }
+      .portfolio .pf-wrapper .pf-item.uq {
+        top: 45%;
+        right: 27%;
+        z-index: 7; }
+      .portfolio .pf-wrapper .pf-item.pf .info, .portfolio .pf-wrapper .pf-item.nf .info, .portfolio .pf-wrapper .pf-item.wt .info {
+        position: absolute;
+        top: 0;
+        left: 0; }
+      .portfolio .pf-wrapper .pf-item.pf:hover, .portfolio .pf-wrapper .pf-item.nf:hover, .portfolio .pf-wrapper .pf-item.wt:hover {
+        transform: translateX(15%); }
+      .portfolio .pf-wrapper .pf-item.pf:hover .info, .portfolio .pf-wrapper .pf-item.nf:hover .info, .portfolio .pf-wrapper .pf-item.wt:hover .info {
+        transform: translateX(-105%); }
+      .portfolio .pf-wrapper .pf-item.pf:hover .title, .portfolio .pf-wrapper .pf-item.nf:hover .title, .portfolio .pf-wrapper .pf-item.wt:hover .title {
+        border-radius: 4px; }
+      .portfolio .pf-wrapper .pf-item.fl .info, .portfolio .pf-wrapper .pf-item.uq .info {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; }
+      .portfolio .pf-wrapper .pf-item.fl:hover, .portfolio .pf-wrapper .pf-item.uq:hover {
+        transform: translateX(-10%); }
+      .portfolio .pf-wrapper .pf-item.fl:hover .info, .portfolio .pf-wrapper .pf-item.uq:hover .info {
+        transform: translateX(105%); }
+      .portfolio .pf-wrapper .pf-item.fl:hover .title, .portfolio .pf-wrapper .pf-item.uq:hover .title {
+        text-align: right;
+        border-radius: 4px; }
+    .portfolio .pf-wrapper .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(140, 141, 150, 0.5);
+      opacity: 0;
+      transition: 0.5s; }
+      .portfolio .pf-wrapper .overlay .link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%; }
+        .portfolio .pf-wrapper .overlay .link span {
+          transition: 0.5s; }
+          .portfolio .pf-wrapper .overlay .link span:first-child {
+            margin-bottom: 10px; }
+          .portfolio .pf-wrapper .overlay .link span:hover {
+            opacity: 0.5; }
+      .portfolio .pf-wrapper .overlay .img-mo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        border-radius: 6px; }
+        .portfolio .pf-wrapper .overlay .img-mo img {
+          width: 30%;
+          border-radius: 6px; }
+        .portfolio .pf-wrapper .overlay .img-mo span {
+          margin-bottom: 4px;
+          font-size: 0.8rem; }
+
+footer {
+  height: 100vh; }
+  footer .blog-icon img {
+    width: 16px; }
 
 /*# sourceMappingURL=style.css.map */

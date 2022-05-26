@@ -1,0 +1,113 @@
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+
+  * {
+    color: $primary;
+  }
+  .desc {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    @include responsive {
+      flex-direction: column;
+    }
+    .icon-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      width: 40%;
+      margin-right: 25px;
+      transform: translateX(85%);
+      opacity: 0;
+      @include responsive {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+      .skill-item {
+        width: fit-content;
+        height: fit-content;
+        margin-bottom: 15px;
+        @include responsive {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
+
+        img {
+          width: 150px;
+          height: 100%;
+          object-fit: contain;
+          @include responsive {
+            width: 100px;
+          }
+        }
+
+        .html,
+        .js {
+          width: 150px;
+          height: 150px;
+          @include responsive {
+            width: 95px;
+            height: 95px;
+          }
+        }
+        .css {
+          width: 110px;
+          height: 150px;
+          @include responsive {
+            width: 70px;
+            height: 95px;
+          }
+        }
+
+        &:first-child {
+          @include responsive {
+            display: flex;
+          }
+        }
+        &:nth-child(2) {
+          margin-left: 20px;
+        }
+        &:last-child {
+          margin-left: 15px;
+          margin-bottom: 0;
+        }
+      }
+    }
+    .skill-desc {
+      width: 50%;
+      margin-left: 25px;
+      transform: translateX(50%);
+      opacity: 0;
+
+      @include responsive {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
+      }
+      p {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        @include responsive {
+          padding: 0 10px;
+          font-size: 1rem;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

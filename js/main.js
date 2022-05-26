@@ -40,5 +40,3 @@ toTopButton_PC.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 window.addEventListener("scroll", _.throttle(topButtonActivePC, 300));
-
-// sction title event

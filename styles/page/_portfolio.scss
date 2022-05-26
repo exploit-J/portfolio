@@ -1,0 +1,167 @@
+.portfolio {
+  width: 100%;
+  height: 100vh;
+  * {
+    color: white;
+  }
+  .pf-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    .pf-item {
+      position: absolute;
+      width: 25%;
+      min-width: 380px;
+      background-color: $border;
+      border: 1px solid $border;
+      border-radius: 4px;
+      transition: 0.5s;
+      @include responsive {
+        position: static;
+      }
+      &:hover {
+        z-index: $sidebar-level !important;
+      }
+      &:hover .overlay {
+        opacity: 1;
+      }
+
+      .info {
+        width: fit-content;
+        transition: 0.5s;
+        height: 2vh;
+        .title {
+          display: block;
+          width: 100%;
+          height: 2.2vh;
+          margin: 0;
+          padding: 0 4px;
+          background-color: $border;
+          color: $primary;
+        }
+      }
+      .img-pc {
+        position: relative;
+        width: 100%;
+        margin-top: 1.8vh;
+        transform: translateY(4px);
+        img {
+          width: 100%;
+        }
+      }
+
+      &.pf {
+        top: 0;
+        left: 27%;
+        z-index: 3;
+      }
+      &.nf {
+        top: 30%;
+        left: 27%;
+        z-index: 4;
+      }
+      &.wt {
+        top: 60%;
+        left: 27%;
+        z-index: 5;
+      }
+
+      &.fl {
+        top: 15%;
+        right: 27%;
+        z-index: 6;
+      }
+      &.uq {
+        top: 45%;
+        right: 27%;
+        z-index: 7;
+      }
+
+      &.pf,
+      &.nf,
+      &.wt {
+        .info {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        &:hover {
+          transform: translateX(15%);
+        }
+        &:hover .info {
+          transform: translateX(-105%);
+        }
+        &:hover .title {
+          border-radius: 4px;
+        }
+      }
+      &.fl,
+      &.uq {
+        .info {
+          position: absolute;
+          top: 0;
+          right: 0;
+          text-align: right;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+        }
+        &:hover {
+          transform: translateX(-10%);
+        }
+        &:hover .info {
+          transform: translateX(105%);
+        }
+        &:hover .title {
+          text-align: right;
+          border-radius: 4px;
+        }
+      }
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($secondary, 0.5);
+      opacity: 0;
+      transition: 0.5s;
+
+      .link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        span {
+          transition: 0.5s;
+          &:first-child {
+            margin-bottom: 10px;
+          }
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+      .img-mo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        border-radius: 6px;
+
+        img {
+          width: 30%;
+          border-radius: 6px;
+        }
+        span {
+          margin-bottom: 4px;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

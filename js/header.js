@@ -15,7 +15,7 @@ const mainSectionTitle = document.querySelectorAll("main h2");
 const footer = document.querySelector("footer");
 const mainHeader = document.querySelector("header");
 
-history.scrollRestoration = "manual";
+history.scrollRestoration = "auto";
 
 // 페이지랜딩 이벤트
 window.onload = () => {
