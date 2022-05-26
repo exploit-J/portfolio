@@ -595,11 +595,11 @@ main {
         left: 27%;
         z-index: 3; }
       .portfolio-pc .pf-wrapper .pf-item.nf {
-        top: 30%;
+        top: 32%;
         left: 27%;
         z-index: 4; }
       .portfolio-pc .pf-wrapper .pf-item.wt {
-        top: 60%;
+        top: 64%;
         left: 27%;
         z-index: 5; }
       .portfolio-pc .pf-wrapper .pf-item.fl {
@@ -607,7 +607,7 @@ main {
         right: 27%;
         z-index: 6; }
       .portfolio-pc .pf-wrapper .pf-item.uq {
-        top: 45%;
+        top: 47%;
         right: 27%;
         z-index: 7; }
       .portfolio-pc .pf-wrapper .pf-item.pf, .portfolio-pc .pf-wrapper .pf-item.nf, .portfolio-pc .pf-wrapper .pf-item.wt {
@@ -721,7 +721,7 @@ main {
         text-align: left; }
         .portfolio-mo .pf-wrapper .pf-item .info p {
           margin-bottom: 4px;
-          padding-left: 14px; }
+          padding-left: 5%; }
         .portfolio-mo .pf-wrapper .pf-item .info p:nth-last-of-type(1) {
           margin-bottom: 15px; }
         .portfolio-mo .pf-wrapper .pf-item .info .button {
