@@ -39,6 +39,9 @@
           background-color: $border;
           color: $primary;
         }
+        p {
+          width: 100%;
+        }
       }
       .img-pc {
         position: relative;
@@ -89,7 +92,8 @@
           transform: translateX(15%);
         }
         &:hover .info {
-          transform: translateX(-105%);
+          transform: translateX(-100%);
+          padding-right: 5%;
         }
         &:hover .title {
           border-radius: 4px;
@@ -136,7 +140,8 @@
         flex-direction: column;
         align-items: center;
         width: 50%;
-        span {
+        a {
+          font-weight: 700;
           transition: 0.5s;
           &:first-child {
             margin-bottom: 10px;

@@ -255,14 +255,16 @@ header {
     background-color: #F86D7D;
     border-radius: 12px;
     font-size: 1.2rem;
-    opacity: 0.8;
-    transform: translateX(8vw);
+    opacity: 0;
+    transform: translateX(9vw);
+    transition: 0.5s;
     animation: top-button-pc-out 0.5s forwards;
     z-index: 30; }
     @media screen and (max-width: 1024px) {
       header .top-button-pc {
         display: none; } }
     header .top-button-pc.active {
+      opacity: 0.5;
       animation: top-button-pc-in 0.5s forwards; }
     header .top-button-pc:hover {
       opacity: 1; }
@@ -334,7 +336,7 @@ main {
 
 @keyframes top-button-pc-in {
   90% {
-    transform: translateX(-1vh); }
+    transform: translateX(-1vw); }
   100% {
     transform: translateX(0); } }
 
@@ -342,7 +344,7 @@ main {
   0% {
     transform: translateX(0); }
   90% {
-    transform: translateX(-1vh); }
+    transform: translateX(-1vw); }
   100% {
     transform: translateX(8vw); } }
 
@@ -561,6 +563,8 @@ main {
           padding: 0 4px;
           background-color: #E0E2E7;
           color: #3F4150; }
+        .portfolio .pf-wrapper .pf-item .info p {
+          width: 100%; }
       .portfolio .pf-wrapper .pf-item .img-pc {
         position: relative;
         width: 100%;
@@ -595,7 +599,8 @@ main {
       .portfolio .pf-wrapper .pf-item.pf:hover, .portfolio .pf-wrapper .pf-item.nf:hover, .portfolio .pf-wrapper .pf-item.wt:hover {
         transform: translateX(15%); }
       .portfolio .pf-wrapper .pf-item.pf:hover .info, .portfolio .pf-wrapper .pf-item.nf:hover .info, .portfolio .pf-wrapper .pf-item.wt:hover .info {
-        transform: translateX(-105%); }
+        transform: translateX(-100%);
+        padding-right: 5%; }
       .portfolio .pf-wrapper .pf-item.pf:hover .title, .portfolio .pf-wrapper .pf-item.nf:hover .title, .portfolio .pf-wrapper .pf-item.wt:hover .title {
         border-radius: 4px; }
       .portfolio .pf-wrapper .pf-item.fl .info, .portfolio .pf-wrapper .pf-item.uq .info {
@@ -630,11 +635,12 @@ main {
         flex-direction: column;
         align-items: center;
         width: 50%; }
-        .portfolio .pf-wrapper .overlay .link span {
+        .portfolio .pf-wrapper .overlay .link a {
+          font-weight: 700;
           transition: 0.5s; }
-          .portfolio .pf-wrapper .overlay .link span:first-child {
+          .portfolio .pf-wrapper .overlay .link a:first-child {
             margin-bottom: 10px; }
-          .portfolio .pf-wrapper .overlay .link span:hover {
+          .portfolio .pf-wrapper .overlay .link a:hover {
             opacity: 0.5; }
       .portfolio .pf-wrapper .overlay .img-mo {
         display: flex;

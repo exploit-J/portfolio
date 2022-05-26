@@ -34,8 +34,6 @@ window.onload = () => {
   setTimeout(() => {
     nav.style.animation = "nav-move 2s forwards";
     sideBar.style.animation = "sidebar-drop 1s forwards";
-  }, 1000);
-  setTimeout(() => {
     bottomArrow[0].style.animation = "arrow 1s infinite";
     bottomArrow[1].style.animation = "arrow 1s 0.1s infinite";
     bottomArrow[2].style.animation = "arrow 1s 0.2s infinite";

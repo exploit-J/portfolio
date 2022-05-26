@@ -30,7 +30,7 @@ main {
 
 @keyframes top-button-pc-in {
   90% {
-    transform: translateX(-1vh);
+    transform: translateX(-1vw);
   }
   100% {
     transform: translateX(0);
@@ -41,7 +41,7 @@ main {
     transform: translateX(0);
   }
   90% {
-    transform: translateX(-1vh);
+    transform: translateX(-1vw);
   }
   100% {
     transform: translateX(8vw);
