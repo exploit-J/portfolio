@@ -8,7 +8,7 @@ const aboutIntroduce = document.querySelector(".introduce");
 const skillSection = document.querySelector(".skill");
 const skillIcon = document.querySelector(".icon-wrap");
 const skillDesc = document.querySelector(".skill-desc");
-const portfolioItem = document.querySelector(".pf-wrapper");
+const portfolioItem = document.querySelectorAll(".pf-wrapper");
 
 // section appear event
 const sectionEvent = () => {
@@ -21,22 +21,13 @@ const sectionEvent = () => {
 
   const portfolioSectionAni = () => {
     sectionTitle[2].style.animation = "title-appear 2s forwards";
+    sectionTitle[3].style.animation = "title-appear 2s forwards";
     titleBorder[2].style.animation = "border-scale 1s forwards";
-    portfolioItem.style.animation = "top-move 1s forwards";
+    titleBorder[3].style.animation = "border-scale 1s forwards";
+    portfolioItem.forEach((item) => {
+      item.style.animation = "top-move 1s forwards";
+    });
   };
-  console.log(window.scrollY);
-
-  console.log("about Y", header.offsetHeight * 0.8);
-  console.log(
-    "skill Y",
-    header.offsetHeight + aboutSection.offsetHeight * 0.85
-  );
-  console.log(
-    "portfolio Y",
-    header.offsetHeight +
-      aboutSection.offsetHeight +
-      skillSection.offsetHeight * 0.9
-  );
 
   if (window.scrollY > header.offsetHeight * 0.8) {
     sectionTitle[0].style.animation = "title-appear 2s forwards";
