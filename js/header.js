@@ -15,10 +15,16 @@ const mainSectionTitle = document.querySelectorAll("main h2");
 const footer = document.querySelector("footer");
 const mainHeader = document.querySelector("header");
 
-history.scrollRestoration = "auto";
+history.scrollRestoration = "manual";
 
 // 페이지랜딩 이벤트
 window.onload = () => {
+  //TypeIt
+  new TypeIt("#header-title", { startDelay: 3000 })
+    .type("안녕하세요,", { delay: 1000 })
+    .type("<br>신입 프론트엔드 개발자", { delay: 500 })
+    .type("<br>정 훈 입니다.", { delay: 100 })
+    .go();
   setTimeout(() => {
     headerTopBar.style.animation = "topAni 3s";
   }, 1000);
@@ -49,13 +55,6 @@ sideBarButton.addEventListener("click", () => {
   sideBarUl.classList.toggle("active");
   sideBarButton.classList.toggle("active");
 });
-
-//TypeIt
-new TypeIt("#header-title", { startDelay: 3000 })
-  .type("안녕하세요,", { delay: 1000 })
-  .type("<br>신입 프론트엔드 개발자", { delay: 500 })
-  .type("<br>정 훈 입니다.", { delay: 100 })
-  .go();
 
 // move to top button
 const topButtonActive = () => {
