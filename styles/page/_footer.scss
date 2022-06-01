@@ -28,6 +28,12 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    a {
+      transition: 0.5s;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
     i {
       font-size: 3rem;
       @include responsive {
@@ -37,11 +43,14 @@ footer {
     dd {
       margin-bottom: 16px;
     }
-  }
-
-  .blog-icon {
-    img {
-      width: 16px;
+    .blog {
+      img {
+        opacity: 0.7;
+        width: 48px;
+        @include responsive {
+          width: 24px;
+        }
+      }
     }
   }
 }
