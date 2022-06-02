@@ -10,7 +10,7 @@ const sideBarButton = document.querySelector(".sidebar-button");
 const bottomArrow = document.querySelectorAll(".arrow");
 const toTopButton = document.querySelector(".top-button-mo");
 const sideBarLi = document.querySelectorAll(".nav-mo-wrap li");
-const navBarLI = document.querySelectorAll(".nav-pc li");
+const navBarLi = document.querySelectorAll(".nav-pc li");
 const mainSectionTitle = document.querySelectorAll("main h2");
 const footer = document.querySelector("footer");
 const mainHeader = document.querySelector("header");
@@ -19,6 +19,7 @@ history.scrollRestoration = "manual";
 
 // 페이지랜딩 이벤트
 window.onload = () => {
+  let timer = 0;
   //TypeIt
   new TypeIt("#header-title", { startDelay: 3000 })
     .type("안녕하세요,", { delay: 1000 })
@@ -26,27 +27,24 @@ window.onload = () => {
     .type("<br>정 훈 입니다.", { delay: 100 })
     .go();
   setTimeout(() => {
-    headerTopBar.style.animation = "topAni 3s";
+    headerTopBar.classList.add("active");
   }, 1000);
   setTimeout(() => {
-    headerLeftBar.style.animation = "leftAni 3s";
+    headerLeftBar.classList.add("active");
   }, 1500);
   setTimeout(() => {
-    headerRightBar.style.animation = "rightAni 3s";
+    headerRightBar.classList.add("active");
   }, 1800);
   setTimeout(() => {
-    headerBottomBar.style.animation = "bottomAni 3s";
+    headerBottomBar.classList.add("active");
   }, 2300);
   setTimeout(() => {
     nav.style.animation = "nav-move 2s forwards";
     sideBar.style.animation = "sidebar-drop 1s forwards";
-    bottomArrow[0].style.animation = "arrow 1s infinite";
-    bottomArrow[1].style.animation = "arrow 1s 0.1s infinite";
-    bottomArrow[2].style.animation = "arrow 1s 0.2s infinite";
     bottomArrow.forEach((item) => {
-      item.style.display = "block";
+      item.style.animation = `arrow 1s ${(timer += 100)}ms infinite`;
     });
-  }, 8000);
+  }, 0000);
 };
 
 // sdie-bar on/off
@@ -73,16 +71,16 @@ toTopButton.addEventListener("click", () => {
 
 // move to section
 // PC
-navBarLI[0].addEventListener("click", () => {
+navBarLi[0].addEventListener("click", () => {
   mainSectionTitle[0].scrollIntoView({ behavior: "smooth", block: "start" });
 });
-navBarLI[1].addEventListener("click", () => {
+navBarLi[1].addEventListener("click", () => {
   mainSectionTitle[1].scrollIntoView({ behavior: "smooth", block: "start" });
 });
-navBarLI[2].addEventListener("click", () => {
+navBarLi[2].addEventListener("click", () => {
   mainSectionTitle[2].scrollIntoView({ behavior: "smooth", block: "start" });
 });
-navBarLI[3].addEventListener("click", () => {
+navBarLi[3].addEventListener("click", () => {
   footer.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 // MOBILE
@@ -93,7 +91,7 @@ sideBarLi[1].addEventListener("click", () => {
   mainSectionTitle[1].scrollIntoView({ behavior: "smooth", block: "start" });
 });
 sideBarLi[2].addEventListener("click", () => {
-  mainSectionTitle[2].scrollIntoView({ behavior: "smooth", block: "start" });
+  mainSectionTitle[3].scrollIntoView({ behavior: "smooth", block: "start" });
 });
 sideBarLi[3].addEventListener("click", () => {
   footer.scrollIntoView({ behavior: "smooth", block: "start" });

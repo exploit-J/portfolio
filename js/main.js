@@ -8,7 +8,6 @@ const skillSection = Array.from(
 );
 const portfolioSection = document.querySelectorAll(".pf-wrapper");
 const portfolioItem = document.querySelectorAll(".portfolio.mo .pf-item");
-console.log(portfolioItem);
 
 // section appear event
 const sectionEvent = () => {

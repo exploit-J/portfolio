@@ -166,7 +166,11 @@ header {
     height: 250px;
     background: linear-gradient(to right, $blue, transparent);
     overflow: hidden;
-    transform: translateX(-100%);
+    transform: translateX(100%);
+    transition: 3s;
+    &.active {
+      transform: translateX(-100%);
+    }
     @include responsive {
       height: 10%;
     }
@@ -181,6 +185,10 @@ header {
     background: linear-gradient(to top, $red, transparent);
     overflow: hidden;
     transform: translateY(-100%);
+    transition: 3s;
+    &.active {
+      transform: translateY(100%);
+    }
     @include responsive {
       width: 20%;
     }
@@ -193,7 +201,11 @@ header {
     height: 100vh;
     background: linear-gradient(to bottom, $green, transparent);
     overflow: hidden;
-    transform: translateY(-100%);
+    transform: translateY(100%);
+    transition: 3s;
+    &.active {
+      transform: translateY(-100%);
+    }
     @include responsive {
       width: 20%;
     }
@@ -206,7 +218,11 @@ header {
     height: 250px;
     background: linear-gradient(to left, $blue-light, transparent);
     overflow: hidden;
-    transform: translateX(100%);
+    transform: translateX(-100%);
+    transition: 3s;
+    &.active {
+      transform: translateX(100%);
+    }
     @include responsive {
       height: 10%;
     }
@@ -223,7 +239,7 @@ header {
     text-align: center;
 
     .arrow {
-      display: none;
+      opacity: 0;
       font-size: 1.5rem;
       @include responsive {
         font-size: 1rem;
@@ -278,30 +294,6 @@ header {
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes topAni {
-  from {
-    transform: translateX(100%);
-  }
-}
-@keyframes leftAni {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(100%);
-  }
-}
-@keyframes rightAni {
-  from {
-    transform: translateY(100%);
-  }
-}
-@keyframes bottomAni {
-  from {
-    transform: translateX(-100%);
   }
 }
 @keyframes nav-move {

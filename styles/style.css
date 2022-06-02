@@ -185,7 +185,10 @@ header {
     height: 250px;
     background: linear-gradient(to right, #3DA5F5, transparent);
     overflow: hidden;
-    transform: translateX(-100%); }
+    transform: translateX(100%);
+    transition: 3s; }
+    header .top-bar.active {
+      transform: translateX(-100%); }
     @media screen and (max-width: 1024px) {
       header .top-bar {
         height: 10%; } }
@@ -197,7 +200,10 @@ header {
     height: 100vh;
     background: linear-gradient(to top, #F86D7D, transparent);
     overflow: hidden;
-    transform: translateY(-100%); }
+    transform: translateY(-100%);
+    transition: 3s; }
+    header .left-bar.active {
+      transform: translateY(100%); }
     @media screen and (max-width: 1024px) {
       header .left-bar {
         width: 20%; } }
@@ -209,7 +215,10 @@ header {
     height: 100vh;
     background: linear-gradient(to bottom, #22C58B, transparent);
     overflow: hidden;
-    transform: translateY(-100%); }
+    transform: translateY(100%);
+    transition: 3s; }
+    header .right-bar.active {
+      transform: translateY(-100%); }
     @media screen and (max-width: 1024px) {
       header .right-bar {
         width: 20%; } }
@@ -221,7 +230,10 @@ header {
     height: 250px;
     background: linear-gradient(to left, #ECF6FE, transparent);
     overflow: hidden;
-    transform: translateX(100%); }
+    transform: translateX(-100%);
+    transition: 3s; }
+    header .bottom-bar.active {
+      transform: translateX(100%); }
     @media screen and (max-width: 1024px) {
       header .bottom-bar {
         height: 10%; } }
@@ -235,7 +247,7 @@ header {
     color: white;
     text-align: center; }
     header .bottom-arrow .arrow {
-      display: none;
+      opacity: 0;
       font-size: 1.5rem; }
       @media screen and (max-width: 1024px) {
         header .bottom-arrow .arrow {
@@ -280,24 +292,6 @@ header {
     opacity: 0; }
   to {
     opacity: 1; } }
-
-@keyframes topAni {
-  from {
-    transform: translateX(100%); } }
-
-@keyframes leftAni {
-  from {
-    transform: translateY(-100%); }
-  to {
-    transform: translateY(100%); } }
-
-@keyframes rightAni {
-  from {
-    transform: translateY(100%); } }
-
-@keyframes bottomAni {
-  from {
-    transform: translateX(-100%); } }
 
 @keyframes nav-move {
   20% {
