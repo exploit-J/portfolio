@@ -29,6 +29,11 @@
       margin-right: 25px;
       transform: translateX(85%);
       opacity: 0;
+      transition: 0.5s;
+      &.active {
+        opacity: 1;
+        transform: translateX(0);
+      }
       @include responsive {
         width: 100%;
         margin-right: 0;
@@ -90,6 +95,11 @@
       margin-left: 25px;
       transform: translateX(50%);
       opacity: 0;
+      transition: 0.5s;
+      &.active {
+        opacity: 1;
+        transform: translateX(0);
+      }
 
       @include responsive {
         display: flex;

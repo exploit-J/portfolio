@@ -1,4 +1,4 @@
-.portfolio-pc {
+.portfolio.pc {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,6 +16,11 @@
     height: 100vh;
     opacity: 0;
     transform: translateY(-30px);
+    transition: 0.5s;
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     .pf-item {
       position: absolute;
@@ -89,9 +94,7 @@
         z-index: 7;
       }
 
-      &.pf,
-      &.nf,
-      &.wt {
+      &.left {
         transition: 0.5s;
         .info {
           position: absolute;
@@ -111,8 +114,7 @@
         }
       }
 
-      &.fl,
-      &.uq {
+      &.right {
         .info {
           position: absolute;
           top: 0;
@@ -186,7 +188,7 @@
   }
 }
 
-.portfolio-mo {
+.portfolio.mo {
   display: none;
   color: white;
 
@@ -200,6 +202,12 @@
     width: 100%;
     padding: 4px 8px;
     opacity: 0;
+    transform: translateY(-30px);
+    transition: 0.5s;
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
     .pf-item {
       display: flex;
       flex-direction: column;
@@ -208,6 +216,13 @@
       margin-bottom: 20px;
       border: 1px solid $border;
       border-radius: 8px;
+      opacity: 0;
+      transform: translateY(-30px);
+      transition: 0.5s;
+      &.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
       .title {
         width: 100%;
         margin-bottom: 4px;

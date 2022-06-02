@@ -13,6 +13,7 @@
   * {
     color: #fff;
   }
+
   .about-wrap {
     display: flex;
     justify-content: center;
@@ -30,6 +31,11 @@
       margin-right: 5%;
       opacity: 0;
       transform: translateX(-40%);
+      transition: 0.5s;
+      &.active {
+        opacity: 1;
+        transform: translateX(0);
+      }
       @include responsive {
         width: 50%;
         margin-bottom: 20px;
@@ -52,6 +58,11 @@
       letter-spacing: 1.2px;
       transform: translateX(-55%);
       opacity: 0;
+      transition: 0.5s;
+      &.active {
+        opacity: 1;
+        transform: translateX(0);
+      }
       @include responsive {
         letter-spacing: 0;
       }

@@ -328,7 +328,12 @@ main {
     width: 100%;
     font-size: 4rem;
     text-align: center;
-    opacity: 0; }
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(30%); }
+    main h2.active {
+      opacity: 1;
+      transform: translateY(0); }
     @media screen and (max-width: 1024px) {
       main h2 {
         font-size: 2rem; } }
@@ -338,7 +343,10 @@ main {
     height: 1px;
     margin-bottom: 20px;
     border-bottom: 3px solid #E0E2E7;
-    transform: scaleX(0); }
+    transform: scaleX(0);
+    transition: 0.5s; }
+    main .title-border.active {
+      transform: scaleX(1); }
 
 @keyframes top-button-pc-in {
   90% {
@@ -353,24 +361,6 @@ main {
     transform: translateX(-1vw); }
   100% {
     transform: translateX(8vw); } }
-
-@keyframes border-scale {
-  to {
-    transform: scaleX(1); } }
-
-@keyframes side-move {
-  to {
-    opacity: 1;
-    transform: translateX(0); } }
-
-@keyframes top-move {
-  to {
-    opacity: 1;
-    transform: translateY(0); } }
-
-@keyframes title-appear {
-  to {
-    opacity: 1; } }
 
 .about {
   display: flex;
@@ -401,7 +391,11 @@ main {
       max-width: 450px;
       margin-right: 5%;
       opacity: 0;
-      transform: translateX(-40%); }
+      transform: translateX(-40%);
+      transition: 0.5s; }
+      .about .about-wrap .img.active {
+        opacity: 1;
+        transform: translateX(0); }
       @media screen and (max-width: 1024px) {
         .about .about-wrap .img {
           width: 50%;
@@ -420,7 +414,11 @@ main {
     .about .about-wrap .introduce {
       letter-spacing: 1.2px;
       transform: translateX(-55%);
-      opacity: 0; }
+      opacity: 0;
+      transition: 0.5s; }
+      .about .about-wrap .introduce.active {
+        opacity: 1;
+        transform: translateX(0); }
       @media screen and (max-width: 1024px) {
         .about .about-wrap .introduce {
           letter-spacing: 0; } }
@@ -480,7 +478,11 @@ main {
       width: 40%;
       margin-right: 25px;
       transform: translateX(85%);
-      opacity: 0; }
+      opacity: 0;
+      transition: 0.5s; }
+      .skill .desc .icon-wrap.active {
+        opacity: 1;
+        transform: translateX(0); }
       @media screen and (max-width: 1024px) {
         .skill .desc .icon-wrap {
           width: 100%;
@@ -530,7 +532,11 @@ main {
       width: 50%;
       margin-left: 25px;
       transform: translateX(50%);
-      opacity: 0; }
+      opacity: 0;
+      transition: 0.5s; }
+      .skill .desc .skill-desc.active {
+        opacity: 1;
+        transform: translateX(0); }
       @media screen and (max-width: 1024px) {
         .skill .desc .skill-desc {
           display: flex;
@@ -549,24 +555,28 @@ main {
         .skill .desc .skill-desc p:last-child {
           margin-bottom: 0; }
 
-.portfolio-pc {
+.portfolio.pc {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100vh; }
   @media screen and (max-width: 1024px) {
-    .portfolio-pc {
+    .portfolio.pc {
       display: none; } }
-  .portfolio-pc * {
+  .portfolio.pc * {
     color: white; }
-  .portfolio-pc .pf-wrapper {
+  .portfolio.pc .pf-wrapper {
     position: relative;
     width: 100%;
     height: 100vh;
     opacity: 0;
-    transform: translateY(-30px); }
-    .portfolio-pc .pf-wrapper .pf-item {
+    transform: translateY(-30px);
+    transition: 0.5s; }
+    .portfolio.pc .pf-wrapper.active {
+      opacity: 1;
+      transform: translateY(0); }
+    .portfolio.pc .pf-wrapper .pf-item {
       position: absolute;
       width: 25%;
       min-width: 380px;
@@ -575,17 +585,17 @@ main {
       border-radius: 4px;
       transition: 0.5s; }
       @media screen and (max-width: 1024px) {
-        .portfolio-pc .pf-wrapper .pf-item {
+        .portfolio.pc .pf-wrapper .pf-item {
           position: static; } }
-      .portfolio-pc .pf-wrapper .pf-item:hover {
+      .portfolio.pc .pf-wrapper .pf-item:hover {
         z-index: 30 !important; }
-      .portfolio-pc .pf-wrapper .pf-item:hover .overlay {
+      .portfolio.pc .pf-wrapper .pf-item:hover .overlay {
         opacity: 1; }
-      .portfolio-pc .pf-wrapper .pf-item .info {
+      .portfolio.pc .pf-wrapper .pf-item .info {
         width: fit-content;
         transition: 0.5s;
         height: 2vh; }
-        .portfolio-pc .pf-wrapper .pf-item .info .title {
+        .portfolio.pc .pf-wrapper .pf-item .info .title {
           display: block;
           width: 100%;
           height: 2.2vh;
@@ -593,50 +603,50 @@ main {
           padding: 0 4px;
           background-color: #E0E2E7;
           color: #3F4150; }
-        .portfolio-pc .pf-wrapper .pf-item .info p {
+        .portfolio.pc .pf-wrapper .pf-item .info p {
           width: 100%; }
-      .portfolio-pc .pf-wrapper .pf-item .img-pc {
+      .portfolio.pc .pf-wrapper .pf-item .img-pc {
         position: relative;
         width: 100%;
         margin-top: 1.8vh;
         transform: translateY(4px); }
-        .portfolio-pc .pf-wrapper .pf-item .img-pc img {
+        .portfolio.pc .pf-wrapper .pf-item .img-pc img {
           width: 100%; }
-      .portfolio-pc .pf-wrapper .pf-item.pf {
+      .portfolio.pc .pf-wrapper .pf-item.pf {
         top: 0;
         left: 27%;
         z-index: 3; }
-      .portfolio-pc .pf-wrapper .pf-item.nf {
+      .portfolio.pc .pf-wrapper .pf-item.nf {
         top: 32%;
         left: 27%;
         z-index: 4; }
-      .portfolio-pc .pf-wrapper .pf-item.wt {
+      .portfolio.pc .pf-wrapper .pf-item.wt {
         top: 64%;
         left: 27%;
         z-index: 5; }
-      .portfolio-pc .pf-wrapper .pf-item.fl {
+      .portfolio.pc .pf-wrapper .pf-item.fl {
         top: 15%;
         right: 27%;
         z-index: 6; }
-      .portfolio-pc .pf-wrapper .pf-item.uq {
+      .portfolio.pc .pf-wrapper .pf-item.uq {
         top: 47%;
         right: 27%;
         z-index: 7; }
-      .portfolio-pc .pf-wrapper .pf-item.pf, .portfolio-pc .pf-wrapper .pf-item.nf, .portfolio-pc .pf-wrapper .pf-item.wt {
+      .portfolio.pc .pf-wrapper .pf-item.left {
         transition: 0.5s; }
-        .portfolio-pc .pf-wrapper .pf-item.pf .info, .portfolio-pc .pf-wrapper .pf-item.nf .info, .portfolio-pc .pf-wrapper .pf-item.wt .info {
+        .portfolio.pc .pf-wrapper .pf-item.left .info {
           position: absolute;
           top: 0;
           left: 0; }
-        .portfolio-pc .pf-wrapper .pf-item.pf:hover, .portfolio-pc .pf-wrapper .pf-item.nf:hover, .portfolio-pc .pf-wrapper .pf-item.wt:hover {
+        .portfolio.pc .pf-wrapper .pf-item.left:hover {
           transition: 0.5s;
           transform: translateX(15%); }
-        .portfolio-pc .pf-wrapper .pf-item.pf:hover .info, .portfolio-pc .pf-wrapper .pf-item.nf:hover .info, .portfolio-pc .pf-wrapper .pf-item.wt:hover .info {
+        .portfolio.pc .pf-wrapper .pf-item.left:hover .info {
           transform: translateX(-100%);
           padding-right: 5%; }
-        .portfolio-pc .pf-wrapper .pf-item.pf:hover .title, .portfolio-pc .pf-wrapper .pf-item.nf:hover .title, .portfolio-pc .pf-wrapper .pf-item.wt:hover .title {
+        .portfolio.pc .pf-wrapper .pf-item.left:hover .title {
           border-radius: 4px; }
-      .portfolio-pc .pf-wrapper .pf-item.fl .info, .portfolio-pc .pf-wrapper .pf-item.uq .info {
+      .portfolio.pc .pf-wrapper .pf-item.right .info {
         position: absolute;
         top: 0;
         right: 0;
@@ -644,14 +654,14 @@ main {
         display: flex;
         flex-direction: column;
         align-items: flex-end; }
-      .portfolio-pc .pf-wrapper .pf-item.fl:hover, .portfolio-pc .pf-wrapper .pf-item.uq:hover {
+      .portfolio.pc .pf-wrapper .pf-item.right:hover {
         transform: translateX(-10%); }
-      .portfolio-pc .pf-wrapper .pf-item.fl:hover .info, .portfolio-pc .pf-wrapper .pf-item.uq:hover .info {
+      .portfolio.pc .pf-wrapper .pf-item.right:hover .info {
         transform: translateX(105%); }
-      .portfolio-pc .pf-wrapper .pf-item.fl:hover .title, .portfolio-pc .pf-wrapper .pf-item.uq:hover .title {
+      .portfolio.pc .pf-wrapper .pf-item.right:hover .title {
         text-align: right;
         border-radius: 4px; }
-    .portfolio-pc .pf-wrapper .overlay {
+    .portfolio.pc .pf-wrapper .overlay {
       position: absolute;
       top: 0;
       left: 0;
@@ -663,56 +673,67 @@ main {
       background-color: rgba(140, 141, 150, 0.5);
       opacity: 0;
       transition: 0.5s; }
-      .portfolio-pc .pf-wrapper .overlay .link {
+      .portfolio.pc .pf-wrapper .overlay .link {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 50%; }
-        .portfolio-pc .pf-wrapper .overlay .link a {
+        .portfolio.pc .pf-wrapper .overlay .link a {
           padding: 4px 8px;
           border-radius: 8px;
           background-color: #3F4150;
           font-weight: 700;
           transition: 0.5s; }
-          .portfolio-pc .pf-wrapper .overlay .link a:first-child {
+          .portfolio.pc .pf-wrapper .overlay .link a:first-child {
             margin-bottom: 10px; }
-          .portfolio-pc .pf-wrapper .overlay .link a:hover {
+          .portfolio.pc .pf-wrapper .overlay .link a:hover {
             opacity: 0.5; }
-      .portfolio-pc .pf-wrapper .overlay .img-mo {
+      .portfolio.pc .pf-wrapper .overlay .img-mo {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 50%;
         border-radius: 6px; }
-        .portfolio-pc .pf-wrapper .overlay .img-mo img {
+        .portfolio.pc .pf-wrapper .overlay .img-mo img {
           width: 30%;
           border-radius: 6px; }
-        .portfolio-pc .pf-wrapper .overlay .img-mo span {
+        .portfolio.pc .pf-wrapper .overlay .img-mo span {
           margin-bottom: 4px;
           font-size: 0.8rem; }
 
-.portfolio-mo {
+.portfolio.mo {
   display: none;
   color: white; }
   @media screen and (max-width: 1024px) {
-    .portfolio-mo {
+    .portfolio.mo {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 50px 0; } }
-  .portfolio-mo .pf-wrapper {
+  .portfolio.mo .pf-wrapper {
     width: 100%;
     padding: 4px 8px;
-    opacity: 0; }
-    .portfolio-mo .pf-wrapper .pf-item {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: 0.5s; }
+    .portfolio.mo .pf-wrapper.active {
+      opacity: 1;
+      transform: translateY(0); }
+    .portfolio.mo .pf-wrapper .pf-item {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
       margin-bottom: 20px;
       border: 1px solid #E0E2E7;
-      border-radius: 8px; }
-      .portfolio-mo .pf-wrapper .pf-item .title {
+      border-radius: 8px;
+      opacity: 0;
+      transform: translateY(-30px);
+      transition: 0.5s; }
+      .portfolio.mo .pf-wrapper .pf-item.active {
+        opacity: 1;
+        transform: translateY(0); }
+      .portfolio.mo .pf-wrapper .pf-item .title {
         width: 100%;
         margin-bottom: 4px;
         background-color: #E0E2E7;
@@ -721,26 +742,26 @@ main {
         text-align: center;
         font-size: 1.1rem;
         font-weight: 700; }
-      .portfolio-mo .pf-wrapper .pf-item .img-pc {
+      .portfolio.mo .pf-wrapper .pf-item .img-pc {
         width: 90%;
         margin: 5px 0; }
-        .portfolio-mo .pf-wrapper .pf-item .img-pc img {
+        .portfolio.mo .pf-wrapper .pf-item .img-pc img {
           width: 100%;
           border: 1px solid #8C8D96; }
-      .portfolio-mo .pf-wrapper .pf-item .info {
+      .portfolio.mo .pf-wrapper .pf-item .info {
         width: 100%;
         font-size: 0.85rem;
         text-align: left; }
-        .portfolio-mo .pf-wrapper .pf-item .info p {
+        .portfolio.mo .pf-wrapper .pf-item .info p {
           margin-bottom: 4px;
           padding-left: 5%; }
-        .portfolio-mo .pf-wrapper .pf-item .info p:nth-last-of-type(1) {
+        .portfolio.mo .pf-wrapper .pf-item .info p:nth-last-of-type(1) {
           margin-bottom: 15px; }
-        .portfolio-mo .pf-wrapper .pf-item .info .button {
+        .portfolio.mo .pf-wrapper .pf-item .info .button {
           display: flex;
           justify-content: center;
           margin-bottom: 10px; }
-          .portfolio-mo .pf-wrapper .pf-item .info .button a {
+          .portfolio.mo .pf-wrapper .pf-item .info .button a {
             padding: 5px 10px;
             margin: 5px 10px;
             color: #3F4150;
