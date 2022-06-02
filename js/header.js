@@ -44,7 +44,7 @@ window.onload = () => {
     bottomArrow.forEach((item) => {
       item.style.animation = `arrow 1s ${(timer += 100)}ms infinite`;
     });
-  }, 0000);
+  }, 8000);
 };
 
 // sdie-bar on/off
