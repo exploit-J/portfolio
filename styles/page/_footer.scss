@@ -19,15 +19,26 @@ footer {
     text-align: center;
     font-size: 2rem;
     @include responsive {
-      // margin-top: 50px;
       font-size: 1.2rem;
     }
   }
 
-  .items {
+  dl {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    width: 50%;
+    @include responsive {
+      display: block;
+      width: 100%;
+    }
+    .dt-wrap {
+      width: 50%;
+      @include responsive {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+    }
     a {
       transition: 0.5s;
       &:hover {
@@ -41,6 +52,7 @@ footer {
       }
     }
     dd {
+      margin-left: 8px;
       margin-bottom: 16px;
     }
     .blog {

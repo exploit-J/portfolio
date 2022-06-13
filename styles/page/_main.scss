@@ -4,6 +4,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
   overflow: hidden;
   @include responsive {
     height: fit-content;

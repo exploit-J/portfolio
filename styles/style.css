@@ -310,6 +310,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
   overflow: hidden; }
   @media screen and (max-width: 1024px) {
     main {
@@ -358,7 +359,8 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  background-color: #fff; }
   @media screen and (max-width: 1024px) {
     .about {
       height: fit-content;
@@ -602,7 +604,7 @@ main {
         transform: translateY(4px); }
         .portfolio.pc .pf-wrapper .pf-item .img-pc img {
           width: 100%; }
-      .portfolio.pc .pf-wrapper .pf-item.pf {
+      .portfolio.pc .pf-wrapper .pf-item.ac {
         top: 0;
         left: 27%;
         z-index: 3; }
@@ -614,11 +616,11 @@ main {
         top: 64%;
         left: 27%;
         z-index: 5; }
-      .portfolio.pc .pf-wrapper .pf-item.fl {
+      .portfolio.pc .pf-wrapper .pf-item.uq {
         top: 15%;
         right: 27%;
         z-index: 6; }
-      .portfolio.pc .pf-wrapper .pf-item.uq {
+      .portfolio.pc .pf-wrapper .pf-item.pf {
         top: 47%;
         right: 27%;
         z-index: 7; }
@@ -782,26 +784,38 @@ footer {
     @media screen and (max-width: 1024px) {
       footer .thx {
         font-size: 1.2rem; } }
-  footer .items {
+  footer dl {
     display: flex;
-    flex-direction: column;
-    justify-content: center; }
-    footer .items a {
+    flex-wrap: wrap;
+    width: 50%; }
+    @media screen and (max-width: 1024px) {
+      footer dl {
+        display: block;
+        width: 100%; } }
+    footer dl .dt-wrap {
+      width: 50%; }
+      @media screen and (max-width: 1024px) {
+        footer dl .dt-wrap {
+          display: flex;
+          justify-content: center;
+          width: 100%; } }
+    footer dl a {
       transition: 0.5s; }
-      footer .items a:hover {
+      footer dl a:hover {
         opacity: 0.5; }
-    footer .items i {
+    footer dl i {
       font-size: 3rem; }
       @media screen and (max-width: 1024px) {
-        footer .items i {
+        footer dl i {
           font-size: 1.5rem; } }
-    footer .items dd {
+    footer dl dd {
+      margin-left: 8px;
       margin-bottom: 16px; }
-    footer .items .blog img {
+    footer dl .blog img {
       opacity: 0.7;
       width: 48px; }
       @media screen and (max-width: 1024px) {
-        footer .items .blog img {
+        footer dl .blog img {
           width: 24px; } }
 
 /*# sourceMappingURL=style.css.map */
