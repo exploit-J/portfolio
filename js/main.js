@@ -71,9 +71,9 @@ window.addEventListener("scroll", _.throttle(sectionEvent, 300));
 
 // move to top active
 const topButtonActivePC = () => {
-  if (window.scrollY >= header.offsetHeight * 1.1) {
+  if (window.scrollY >= 1000) {
     toTopButton_PC.classList.add("active");
-  } else if (window.scrollY < header.offsetHeight * 1.1) {
+  } else if (window.scrollY < 1000) {
     toTopButton_PC.classList.remove("active");
   }
 };

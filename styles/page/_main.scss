@@ -38,6 +38,60 @@ main {
     }
   }
 }
+.intro {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: $blue;
+
+  #header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+    text-align: center;
+    background-color: transparent;
+
+    @include responsive {
+      width: 100%;
+      font-size: 1.5rem;
+    }
+  }
+  .bottom-arrow {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    color: white;
+    transform: translateX(-50%);
+    text-align: center;
+
+    .arrow {
+      font-size: 1.5rem;
+      opacity: 0;
+      @include responsive {
+        font-size: 1rem;
+      }
+      &:nth-child(2) {
+        transform: translateY(-10px);
+        @include responsive {
+          transform: translateY(0);
+        }
+      }
+      &:last-child {
+        transform: translateY(-20px);
+        @include responsive {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
 
 @keyframes top-button-pc-in {
   90% {

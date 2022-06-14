@@ -56,9 +56,9 @@ sideBarButton.addEventListener("click", () => {
 
 //top-button active
 const topButtonActive = () => {
-  if (window.scrollY >= mainHeader.offsetHeight * 0.8) {
+  if (window.scrollY >= 800) {
     toTopButton.classList.add("active");
-  } else if (window.scrollY < mainHeader.offsetHeight * 0.8) {
+  } else if (window.scrollY < 800) {
     toTopButton.classList.remove("active");
   }
 };

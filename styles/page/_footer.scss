@@ -1,4 +1,5 @@
 footer {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,6 +8,7 @@ footer {
   height: 35vh;
   background-color: $background;
   color: $primary;
+  z-index: 999 !important;
   @include responsive {
     height: fit-content;
     padding: 50px 0;

@@ -48,10 +48,6 @@ address {
   font-style: normal; }
 
 header {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-color: #3DA5F5;
   overflow: hidden; }
   header .nav-pc {
     position: fixed;
@@ -134,9 +130,11 @@ header {
         width: 100%;
         max-height: 0;
         transition: 0.5s;
-        transform: translateY(-300px);
+        transform: translateY(-30px);
+        visibility: hidden;
         opacity: 0; }
         header .nav-mo .nav-mo-wrap ul.active {
+          visibility: visible;
           max-height: 200px;
           transform: translateY(0);
           opacity: 1; }
@@ -164,103 +162,6 @@ header {
       header .nav-mo .top-button-mo.active {
         display: flex;
         transform: translateY(0); }
-  header #header-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #FFFFFF;
-    text-align: center;
-    background-color: transparent; }
-    @media screen and (max-width: 1024px) {
-      header #header-title {
-        width: 100%;
-        font-size: 1.5rem; } }
-  header .top-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 250px;
-    background: linear-gradient(to right, #3DA5F5, transparent);
-    overflow: hidden;
-    transform: translateX(100%);
-    transition: 3s; }
-    header .top-bar.active {
-      transform: translateX(-100%); }
-    @media screen and (max-width: 1024px) {
-      header .top-bar {
-        height: 10%; } }
-  header .left-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100vh;
-    background: linear-gradient(to top, #F86D7D, transparent);
-    overflow: hidden;
-    transform: translateY(-100%);
-    transition: 3s; }
-    header .left-bar.active {
-      transform: translateY(100%); }
-    @media screen and (max-width: 1024px) {
-      header .left-bar {
-        width: 20%; } }
-  header .right-bar {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 250px;
-    height: 100vh;
-    background: linear-gradient(to bottom, #22C58B, transparent);
-    overflow: hidden;
-    transform: translateY(100%);
-    transition: 3s; }
-    header .right-bar.active {
-      transform: translateY(-100%); }
-    @media screen and (max-width: 1024px) {
-      header .right-bar {
-        width: 20%; } }
-  header .bottom-bar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: 250px;
-    background: linear-gradient(to left, #ECF6FE, transparent);
-    overflow: hidden;
-    transform: translateX(-100%);
-    transition: 3s; }
-    header .bottom-bar.active {
-      transform: translateX(100%); }
-    @media screen and (max-width: 1024px) {
-      header .bottom-bar {
-        height: 10%; } }
-  header .bottom-arrow {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    color: white;
-    transform: translateX(-50%);
-    text-align: center; }
-    header .bottom-arrow .arrow {
-      font-size: 1.5rem;
-      opacity: 0; }
-      @media screen and (max-width: 1024px) {
-        header .bottom-arrow .arrow {
-          font-size: 1rem; } }
-      header .bottom-arrow .arrow:nth-child(2) {
-        transform: translateY(-10px); }
-        @media screen and (max-width: 1024px) {
-          header .bottom-arrow .arrow:nth-child(2) {
-            transform: translateY(0); } }
-      header .bottom-arrow .arrow:last-child {
-        transform: translateY(-20px); }
-        @media screen and (max-width: 1024px) {
-          header .bottom-arrow .arrow:last-child {
-            transform: translateY(0); } }
   header .top-button-pc {
     position: fixed;
     bottom: 5%;
@@ -339,6 +240,52 @@ main {
     main .title-border.active {
       transform: scaleX(1); }
 
+.intro {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #3DA5F5; }
+  .intro #header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    text-align: center;
+    background-color: transparent; }
+    @media screen and (max-width: 1024px) {
+      .intro #header-title {
+        width: 100%;
+        font-size: 1.5rem; } }
+  .intro .bottom-arrow {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    color: white;
+    transform: translateX(-50%);
+    text-align: center; }
+    .intro .bottom-arrow .arrow {
+      font-size: 1.5rem;
+      opacity: 0; }
+      @media screen and (max-width: 1024px) {
+        .intro .bottom-arrow .arrow {
+          font-size: 1rem; } }
+      .intro .bottom-arrow .arrow:nth-child(2) {
+        transform: translateY(-10px); }
+        @media screen and (max-width: 1024px) {
+          .intro .bottom-arrow .arrow:nth-child(2) {
+            transform: translateY(0); } }
+      .intro .bottom-arrow .arrow:last-child {
+        transform: translateY(-20px); }
+        @media screen and (max-width: 1024px) {
+          .intro .bottom-arrow .arrow:last-child {
+            transform: translateY(0); } }
+
 @keyframes top-button-pc-in {
   90% {
     transform: translateX(-1vw); }
@@ -364,8 +311,8 @@ main {
   @media screen and (max-width: 1024px) {
     .about {
       height: fit-content;
-      margin-bottom: 50px;
-      margin-top: 50px; } }
+      padding-bottom: 50px;
+      padding-top: 50px; } }
   .about * {
     color: #3F4150; }
   .about .about-wrap {
@@ -449,7 +396,7 @@ main {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: rgba(248, 109, 125, 0.5); }
+  background-color: #f79ea8; }
   @media screen and (max-width: 1024px) {
     .skill {
       height: fit-content;
@@ -554,7 +501,8 @@ main {
   align-items: center;
   width: 100%;
   height: 100vh;
-  margin-top: 80px; }
+  padding-top: 80px;
+  background-color: #fff; }
   @media screen and (max-width: 1024px) {
     .portfolio.pc {
       display: none; } }
@@ -698,6 +646,7 @@ main {
 
 .portfolio.mo {
   display: none;
+  background-color: #fff;
   color: #3F4150; }
   @media screen and (max-width: 1024px) {
     .portfolio.mo {
@@ -765,6 +714,7 @@ main {
             font-weight: 700; }
 
 footer {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -772,7 +722,8 @@ footer {
   width: 100%;
   height: 35vh;
   background-color: #F7F8FA;
-  color: #3F4150; }
+  color: #3F4150;
+  z-index: 999 !important; }
   @media screen and (max-width: 1024px) {
     footer {
       height: fit-content;
