@@ -28,6 +28,7 @@
       position: absolute;
       width: 25%;
       min-width: 380px;
+      max-width: 550px;
       background-color: $border;
       border: 1px solid $border;
       border-radius: 4px;
@@ -71,29 +72,29 @@
 
       &.ac {
         top: 0;
-        left: 27%;
+        left: 30%;
         z-index: 3;
       }
       &.nf {
         top: 32%;
-        left: 27%;
-        z-index: 4;
+        left: 30%;
+        z-index: 5;
       }
       &.wt {
         top: 64%;
-        left: 27%;
-        z-index: 5;
+        left: 30%;
+        z-index: 7;
       }
 
       &.uq {
         top: 15%;
-        right: 27%;
-        z-index: 6;
+        right: 30%;
+        z-index: 4;
       }
       &.pf {
         top: 47%;
-        right: 27%;
-        z-index: 7;
+        right: 30%;
+        z-index: 6;
       }
 
       &.left {
@@ -147,7 +148,7 @@
       align-items: center;
       width: 100%;
       height: 100%;
-      background-color: rgba($secondary, 0.5);
+      background-color: rgba($secondary, 0.4);
       opacity: 0;
       transition: 0.5s;
 
