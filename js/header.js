@@ -21,30 +21,30 @@ history.scrollRestoration = "manual";
 window.onload = () => {
   let timer = 0;
   //TypeIt
-  new TypeIt("#header-title", { startDelay: 3000 })
+  new TypeIt("#header-title", { startDelay: 2000 })
     .type("안녕하세요,", { delay: 1000 })
     .type("<br>신입 퍼블리셔 지원자", { delay: 500 })
     .type("<br>정 훈 입니다.", { delay: 100 })
     .go();
-  setTimeout(() => {
-    headerTopBar.classList.add("active");
-  }, 1000);
-  setTimeout(() => {
-    headerLeftBar.classList.add("active");
-  }, 1500);
-  setTimeout(() => {
-    headerRightBar.classList.add("active");
-  }, 1800);
-  setTimeout(() => {
-    headerBottomBar.classList.add("active");
-  }, 2300);
+  // setTimeout(() => {
+  //   headerTopBar.classList.add("active");
+  // }, 1000);
+  // setTimeout(() => {
+  //   headerLeftBar.classList.add("active");
+  // }, 1500);
+  // setTimeout(() => {
+  //   headerRightBar.classList.add("active");
+  // }, 1800);
+  // setTimeout(() => {
+  //   headerBottomBar.classList.add("active");
+  // }, 2300);
   setTimeout(() => {
     nav.style.animation = "nav-move 2s forwards";
     sideBar.style.animation = "sidebar-drop 1s forwards";
     bottomArrow.forEach((item) => {
       item.style.animation = `arrow 1s ${(timer += 100)}ms infinite`;
     });
-  }, 100);
+  }, 7500);
 };
 
 // sdie-bar event

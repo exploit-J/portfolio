@@ -27,9 +27,11 @@ footer {
     display: flex;
     flex-wrap: wrap;
     width: 50%;
+    margin-left: 25%;
     @include responsive {
       display: block;
       width: 100%;
+      margin-left: 0;
     }
     .dt-wrap {
       width: 50%;

@@ -553,7 +553,8 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  margin-top: 80px; }
   @media screen and (max-width: 1024px) {
     .portfolio.pc {
       display: none; } }
@@ -788,11 +789,13 @@ footer {
   footer dl {
     display: flex;
     flex-wrap: wrap;
-    width: 50%; }
+    width: 50%;
+    margin-left: 25%; }
     @media screen and (max-width: 1024px) {
       footer dl {
         display: block;
-        width: 100%; } }
+        width: 100%;
+        margin-left: 0; } }
     footer dl .dt-wrap {
       width: 50%; }
       @media screen and (max-width: 1024px) {
