@@ -9,6 +9,7 @@
   @include responsive {
     height: fit-content;
     margin-bottom: 50px;
+    margin-top: 50px;
   }
 
   * {
@@ -57,18 +58,19 @@
     }
     .introduce {
       letter-spacing: 1.2px;
-      transform: translateX(-55%);
-      opacity: 0;
-      transition: 0.5s;
-      &.active {
-        opacity: 1;
-        transform: translateX(0);
-      }
+
       @include responsive {
         letter-spacing: 0;
       }
       p {
         margin-bottom: 30px;
+        transform: translateX(-55%);
+        opacity: 0;
+        transition: 0.5s;
+        &.active {
+          opacity: 1;
+          transform: translateX(0);
+        }
         @include responsive {
           font-size: 0.9rem;
           line-height: 180%;

@@ -23,7 +23,7 @@ window.onload = () => {
   //TypeIt
   new TypeIt("#header-title", { startDelay: 3000 })
     .type("안녕하세요,", { delay: 1000 })
-    .type("<br>신입 프론트엔드 개발자", { delay: 500 })
+    .type("<br>신입 퍼블리셔 지원자", { delay: 500 })
     .type("<br>정 훈 입니다.", { delay: 100 })
     .go();
   setTimeout(() => {
@@ -44,17 +44,17 @@ window.onload = () => {
     bottomArrow.forEach((item) => {
       item.style.animation = `arrow 1s ${(timer += 100)}ms infinite`;
     });
-  }, 8000);
+  }, 100);
 };
 
-// sdie-bar on/off
+// sdie-bar event
 sideBarButton.addEventListener("click", () => {
   sideBar.classList.toggle("active");
   sideBarUl.classList.toggle("active");
   sideBarButton.classList.toggle("active");
 });
 
-// move to top button
+//top-button active
 const topButtonActive = () => {
   if (window.scrollY >= mainHeader.offsetHeight * 0.8) {
     toTopButton.classList.add("active");
