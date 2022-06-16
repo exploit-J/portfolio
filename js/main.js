@@ -7,7 +7,6 @@ const aboutParagraph = document.querySelectorAll(".about .introduce p");
 const skillSection = Array.from(
   document.querySelector(".skill .desc").children
 );
-console.log(skillSection);
 const portfolioSection = document.querySelectorAll(".pf-wrapper");
 const portfolioItem = document.querySelectorAll(".portfolio.mo .pf-item");
 
